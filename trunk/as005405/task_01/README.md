@@ -4,8 +4,7 @@
 <h3>Student: Kalita Ekaterina</h3>
 
 <h4>Task 1.</h4> 
-Modeling controlled object
-Write program (C++), which simulate object temperature. With help Linear and Nonlinear models.
+ Modeling controlled object. Write program (C++). With help Linear and Nonlinear models.
 
 <h4>Code:</h4>
 
