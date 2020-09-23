@@ -1,16 +1,4 @@
-# Laboratory work #1
-
-### Student: Sytoi Zakhar
-
-##### Task 1. Modeling controlled object
-
-Write program (C++), which simulate object temperature.
-
-
-##### Code:
-```c++
-
-#include <iostream>
+﻿#include <iostream>
 
 using namespace std;
 void linearSimulation(double a, double b, double u, double y) {
@@ -42,5 +30,4 @@ int main() {
     cout << "Non linear simulation:" <<endl;
     nonLinearSimulation(1, 0.0019, 0.5, 3, 5.8, 18);
     return 0;
-```
 }
