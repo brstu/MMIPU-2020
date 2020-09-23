@@ -1,0 +1,3 @@
+D:/MMIPU-2020/trunk/as005415/task_01/src/cmake-build-debug/CMakeFiles/src.dir
+D:/MMIPU-2020/trunk/as005415/task_01/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/MMIPU-2020/trunk/as005415/task_01/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
