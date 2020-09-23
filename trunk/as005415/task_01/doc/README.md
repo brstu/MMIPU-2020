@@ -8,7 +8,9 @@ Write program (C++), which simulate object temperature.
 
 Linear and nonlinear models:
 
-![](img\sub_eq.png)
+<p align="center">
+    <img src="img/sub_eq.png">
+</p>
 
 ##### Code:
 
