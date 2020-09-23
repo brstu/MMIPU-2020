@@ -8,17 +8,7 @@ Write program (C++), which simulate object temperature.
 
 Linear and nonlinear models:
 
-1. $$
-   {y_{t+1}} = ay_t + bu_t
-   $$
-
-2. 
-
-2. $$
-   {y_{t+1}} = ay_t - by^2_{t-1} + cu_t + d\sin(u_{t-1})
-   $$
-
-
+![](img\sub_eq.png)
 
 ##### Code:
 
