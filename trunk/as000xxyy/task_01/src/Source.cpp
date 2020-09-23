@@ -11,12 +11,12 @@ void linearequation(float a,float b,float y0,float ut,int time) {
 	cout << endl;
 }
 void nonlinearequation(float a, float b, float c,float d,float y0,float ut, float ut1,float time) {
-	int preivousY = y0;
-	int y = 0;
+	float preivousY = y0;
+	float y = 0;
 	cout << "1 " << " Yo = " << y0 << endl;
 	for (int i = 0; i < time; i++) {
 		y = y0;
-		y0 = a * y0 + b * pow(preivousY, 2) + c * ut + d * sin(ut1);
+		y0 = a * y0 - b * pow(preivousY, 2) + c * ut + d * sin(ut1);
 		preivousY = y;
 		cout << i + 2 << " Yo = " << y0 << endl;
 	}
