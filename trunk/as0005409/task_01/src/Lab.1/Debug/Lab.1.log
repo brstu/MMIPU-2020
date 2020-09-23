@@ -1,0 +1,3 @@
+﻿  Source.cpp
+D:\Kraken\MMIPU-2020\trunk\as0005409\task_01\src\Lab.1\Source.cpp(33,51): warning C4305: инициализация: усечение из "double" в "float"
+  Lab.1.vcxproj -> D:\Kraken\MMIPU-2020\trunk\as0005409\task_01\src\Debug\Lab.1.exe
