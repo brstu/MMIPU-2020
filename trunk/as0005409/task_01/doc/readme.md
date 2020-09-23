@@ -18,5 +18,3 @@ cout<<"Hello World!";
 ```
 
 [help](https://www.wikipedia.org)
-
-![text](https://ru.wikipedia.org/wiki/Markdown#/media/Файл:Markdown-mark.svg)
