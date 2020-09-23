@@ -7,9 +7,9 @@ Write program (C++), which simulate object temperature.
 
 Linear and nonlinear models:
 
-<div align="center">
-<img rel="https://github.com/brstu/MMIPU-2020/blob/master/tasks/task_01/images/sub_eq.png" alt="lenear">
-</div>
+<p align="center">
+<img rel="images/img2.png" alt="models">
+</p>
 
 
 ##### Code:
@@ -40,9 +40,9 @@ void nonlinearModel(int a, int b, int c, int d, float y0, float y1, float u0, fl
 	}
 }
 ```
-<div align="center">
-<img rel="https://github.com/as005410/MMIPU-2020/blob/trunk/as000xxyy/tasc_01/img/result.jpg" alt="result">
-</div>
+<p align="center">
+<img rel="images/result.jpg" alt="result">
+</p>
 
 **Conclusion**: I have learhed how to work with git and I using git systems I uploaded my cpp file and made the report in readme.md file
 
