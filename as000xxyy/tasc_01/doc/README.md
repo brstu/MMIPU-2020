@@ -8,7 +8,7 @@ Write program (C++), which simulate object temperature.
 Linear and nonlinear models:
 
 <p align="center">
-<img rel="images/img2.png" alt="models">
+<img src="images/img2.png" alt="models">
 </p>
 
 
@@ -41,7 +41,7 @@ void nonlinearModel(int a, int b, int c, int d, float y0, float y1, float u0, fl
 }
 ```
 <p align="center">
-<img rel="images/result.jpg" alt="result">
+<img src="images/result.jpg" alt="result">
 </p>
 
 **Conclusion**: I have learhed how to work with git and I using git systems I uploaded my cpp file and made the report in readme.md file
