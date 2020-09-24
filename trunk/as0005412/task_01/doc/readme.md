@@ -1,14 +1,14 @@
-#Laboratory Work #1
-####Completed by the 3rd year student of
-####Faculty of Electronic-Information Systems
-####the group АС-54и, Safrin A. A.
-####Checked by Ivanyuk D. S. 
-######Task:
+# Laboratory Work #1
+#### Completed by the 3rd year student of
+#### Faculty of Electronic-Information Systems
+#### the group АС-54и, Safrin A. A.
+#### Checked by Ivanyuk D. S. 
+###### Task:
 Write program (C++), which simulates these linear and nonlinear models.
 <p align="center">
-    <img src="img/sub_eq.png"
+    <img src="image/sub_eq.png"
 </p>
-######Code:
+###### Code:
 ```c++
 #include <iostream>
 #include <stdio.h>
@@ -45,7 +45,7 @@ int main()
 
 }
 ```
-######Result:
+###### Result:
 ```
 Type constants
 a:3
