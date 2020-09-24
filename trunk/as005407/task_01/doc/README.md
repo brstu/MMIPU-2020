@@ -61,6 +61,9 @@ void nonLinear(float y_t, float u_t, int a, float b, int c, int d)
 		y_t = y_t1;
 	}
 }
+
+##### Solution: 
+
 ```
 By linear equation:
 
@@ -91,5 +94,3 @@ By non-linear equation:
 |No:8     |126.8                   |139.4
 |No:9     |139.4                   |150.4
 |No:10   |150.4                   |159.6
-
-
