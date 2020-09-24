@@ -5,6 +5,9 @@
 ####Checked by Ivanyuk D. S. 
 ######Task:
 Write program (C++), which simulates these linear and nonlinear models.
+<p align="center">
+    <img src="img/sub_eq.png"
+</p>
 ######Code:
 ```c++
 #include <iostream>
