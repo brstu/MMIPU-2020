@@ -9,6 +9,7 @@ Write program (C++), which simulates these linear and nonlinear models.
     <img src="image/sub_eq.png"
 </p>
 ###### Code:
+
 ```c++
 #include <iostream>
 #include <stdio.h>
@@ -45,7 +46,9 @@ int main()
 
 }
 ```
+
 ###### Result:
+
 ```
 Type constants
 a:3
