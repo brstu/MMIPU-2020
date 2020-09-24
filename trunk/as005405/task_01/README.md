@@ -5,6 +5,8 @@
 
 <h4>Task 1.</h4> 
  Modeling controlled object. Write program (C++). With help Linear and Nonlinear models.
+ 
+ ![alt text](https://github.com/as005405/MMIPU-2020/blob/master/trunk/as005405/task_01/Images/main_eq.png)
 
 <h4>Code:</h4>
 
