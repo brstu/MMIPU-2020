@@ -1,16 +1,21 @@
-#Laboratory work No1
-##Modelling control object
-###Completed by Kozik Ilya
-###Task: write program (C++), which simulate object temperature.
-###Given:
-#####Lets get some object to be controlled. We want to control its temperature, which can be described by this differential equation:
+# Laboratory work No1
+## Modelling control object
+### Completed by Kozik Ilya
+### Task: write program (C++), which simulate object temperature.
+### Given:
+##### Lets get some object to be controlled. We want to control its temperature, which can be described by this differential equation:
 
-#####where τ – time (discrete moments 1,2,3…n); y_τ – input temperature; f_τ – input warm; Y_0 – room temperature; C,RC – some constants.
+##### where τ – time (discrete moments 1,2,3…n); y_τ – input temperature; f_τ – input warm; Y_0 – room temperature; C,RC – some constants.
 
- #####Coresponding linear and nonlinear models:
+![alt text](img/1.png)
+
+ ##### Coresponding linear and nonlinear models:
+
+![alt text](img/2.png)
+
+ ##### Task is to write program (C++), which simulates this object temperature.
+ ##### Solution:
  
- #####Task is to write program (C++), which simulates this object temperature.
- #####Solution:
  The code:
 ```cpp
 #include <iostream>
@@ -56,6 +61,9 @@ void nonLinear(float y_t, float u_t, int a, float b, int c, int d)
 		y_t = y_t1;
 	}
 }
+
+##### Solution: 
+
 ```
 By linear equation:
 
@@ -86,5 +94,3 @@ By non-linear equation:
 |No:8     |126.8                   |139.4
 |No:9     |139.4                   |150.4
 |No:10   |150.4                   |159.6
-
-
