@@ -1,6 +1,6 @@
 # Laboratory work #1
 
-#### Student: Zaichuk Daniil
+#### Student: Daniliuk Vladislav
 
 ###### Task 1. Modeling controlled object
 
