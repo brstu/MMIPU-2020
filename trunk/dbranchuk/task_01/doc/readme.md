@@ -8,6 +8,7 @@ alt text_
 
 **Program code:**
 
+```
 #include <iostream>
 #include "cmath"
 using namespace std;
@@ -47,7 +48,7 @@ void NonLineModel(float a, float b, float c, float d, float y1, float y2)
         cout << "y(t"<<i<<")"<<" = " << y2 << " || "<< "y(t+1) = " << yt_2 << endl;
     }
 }
-
+```
 
 ###### **Result:**
 
