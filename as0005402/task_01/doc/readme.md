@@ -31,6 +31,8 @@
     }
     return 0;
   }
-```           
+```      
+**Result:**<br>
+<img src="img/1.png" alt="Result">
 
 **Conclusion:** During this laboratory work I have created C++ program that simulates temperature of some object.
