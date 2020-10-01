@@ -1,8 +1,10 @@
-***Student***: Aniskin Dmitry AS-53 ___Task 1. Modeling controlled object. Write program (C++). With help of Linear and Nonlinear models.___
+***Student***: Aniskin Dmitry AS-53 ___Task 1. Modeling controlled object. Write program (C++). With help of Linear and Nonlinear models.___ 
+
 ![Screenshot](main_eq.png)
+
 ***Program code:***
-'''
-#include <iostream>
+
+''' #include <iostream>
 
 using namespace std;
 
@@ -47,7 +49,6 @@ void linearEquation(float a, float b, float u, float y, int n)
         cout << i << " - y(t)=" << y << endl;
     }
 }
-
 void nonLinearEquation(float a, float b, float c, float d, float u, float y, int n)
 {
     cout << "Nonlinear equation:" << endl;
@@ -56,8 +57,9 @@ void nonLinearEquation(float a, float b, float c, float d, float u, float y, int
         y = a * y - b * y * y + c * u + d * sin(u);
         cout << i << " - y(t)=" << y << endl;
     }
-}
-'''
+} '''
+
 
 ***Result***
+
 ![Screenshot](equations.png)
