@@ -1,6 +1,6 @@
 # Laboratory work #1
 
-### Student: Isachenka Anton
+### Student: Dobrolinskiy Ilya
 ##### Task 1. Modeling controlled object
 
 Write program (C++), which simulate object temperature.
@@ -8,7 +8,7 @@ Write program (C++), which simulate object temperature.
 Linear and nonlinear models:
 
 <p align="center">
-    <img src="img/Linear and nonlinear models.png">
+    <img src="img/sub_eq.png"
 </p>
 
 
