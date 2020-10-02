@@ -45,6 +45,6 @@ void NonLineModel(float a, float b, float c, float d, float y1, float y2)
 
 
 //
-// Created by dbranchuk on 29.09.20.
+// Created by as0005303 on 29.09.20.
 //
 
