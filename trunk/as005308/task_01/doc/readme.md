@@ -51,5 +51,5 @@ int main()
 
 **_LineEqation and NonLineEquation_**
 
-![Screenshot LineModel](screenshot.png)
+![Screenshot LineModel](screenshot.PNG)
 
