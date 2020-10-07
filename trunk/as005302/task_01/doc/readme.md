@@ -58,9 +58,13 @@ void linearEquation(float a, float b, float u, float y, int n)
 void nonLinearEquation(float a, float b, float c, float d, float u, float y, int n)
 {
     cout << "Nonlinear equation:" << endl;
+    float y2 = y;
+    float y3 = 0;
     for (int i = 0; i <= n; i++)
     {
-        y = a * y - b * y * y + c * u + d * sin(u);
+        y3 = y;
+        y = a * y - b * y2 * y2 + c * u + d * sin(u);
+        y2 = y3;
         cout << i << " - y(t)=" << y << endl;
     }
 }
