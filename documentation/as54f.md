@@ -1,8 +1,8 @@
-#Current state for Control System subject year 2020.
+# Current state for Control System subject year 2020.
 
-##Group AS-54f
+## Group AS-54f
 
-###List of students (with github profile links).
+### List of students (with github profile links).
 
 1. [Dmitriy Breshchuk (as005401)](https://github.com/as005401)
 2. [Alina Grigoruk (as005402)](https://github.com/as005402)
@@ -20,7 +20,7 @@
 14. [Zakhar Sytoi (as005414)](https://github.com/as005414)
 15. [Mark Shestakov (as005415)](https://github.com/as005415)
 
-##Laboratory work completion 
+## Laboratory work completion 
 
 | Number of student       | State of 1st Lab         | State of 2nd Lab                         | State of 3rd Lab          | For additional notes |
 | ----------------------- | ------------------------ | ---------------------------------------- | ------------------------- | -------------------- |
@@ -41,7 +41,7 @@
 | 15. Mark Shestakov      | :heavy_check_mark:       | :x:                                      | :x:                       |                      |
 |                         | :x: - not done​           | :heavy_exclamation_mark: - have problems​ | :heavy_check_mark: - done​ |                      |
 
-##Report completion
+## Report completion
 
 | Number of student       | 1st Report         | 2nd Report | 3rd Report                | For additional notes |
 | ----------------------- | ------------------ | ---------- | ------------------------- | -------------------- |
