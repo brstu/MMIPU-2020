@@ -2,7 +2,7 @@
 ___
 #### Лабораторная работа №1
 Реализовать программу (С++), которая симулирует температуру объекта по двум формулам:
-![Form](doc/img/Form.png)
+![Form](img/Form.png)
 ##### Код программы:
 ```c++
 #include <iostream>
@@ -46,4 +46,4 @@ int main()
 }
 ```
 
-![Cons](doc/img/Cons.png)
+![Cons](img/Cons.png)
