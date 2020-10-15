@@ -1,0 +1,41 @@
+[33mcommit ae745f7e9171de79db2928f79d3ecbf860cf8f47[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m)[m
+Author: gafffgona <demidovich.anka@yandex.ru>
+Date:   Thu Oct 15 12:05:12 2020 +0300
+
+    [Task 1] Create readme.md and .cpp file
+
+[33mcommit f29ec2f4210d22199b1d756df3276bdc461dc0b0[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: Anna Demidovich <demidovich.anka@yandex.ru>
+Date:   Sat Oct 3 14:01:55 2020 +0300
+
+    fixed readme.md
+
+[33mcommit be8df386eee8babe5dbbeb2d638e183b882d2e5d[m
+Author: Anna Demidovich <demidovich.anka@yandex.ru>
+Date:   Sat Oct 3 13:59:26 2020 +0300
+
+    fixed readme.md
+
+[33mcommit d18f59f9f89e8a0798a8dc77acd208b5494eddd8[m
+Author: Anna Demidovich <demidovich.anka@yandex.ru>
+Date:   Sat Oct 3 13:58:14 2020 +0300
+
+    added documentation
+
+[33mcommit 1d51f82ed5c82292f24024b603c4f37ca3f6db2b[m
+Author: Anna Demidovich <demidovich.anka@yandex.ru>
+Date:   Sat Oct 3 13:41:14 2020 +0300
+
+    added source code
+
+[33mcommit b1cb5fa694291bc2d746a8ad79d3f9eda2fae22e[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Dzmitry Ivaniuk <dzimitriy@gmail.com>
+Date:   Tue Sep 8 16:07:37 2020 +0300
+
+    Added documentation
+
+[33mcommit a06d4c5e93e84ca5eed874575ec2fd46fd23d217[m
+Author: Dzmitry Ivaniuk <dzimitriy@gmail.com>
+Date:   Tue Sep 8 16:06:55 2020 +0300
+
+    Initial commit
