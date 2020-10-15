@@ -1,6 +1,6 @@
 # Laboratory work #1
 
-#### Student: Sharmanau Ivan
+#### Student: Maksimuk Vladislav
 
 ###### Task 1. Знакомство с Simulink
 
