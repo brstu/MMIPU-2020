@@ -1,6 +1,6 @@
 # Лабораторная работа
 ## Альциванович Н.В.
-![](img/bQqLbKnkz44.jpg)
+![](img/sTeeR0musAI.jpg)
 ```
 #include <iostream>
 
@@ -42,4 +42,4 @@ int main() {
 
 }
 ```
-![](img/sTeeR0musAI.jpg)
+![](img/bQqLbKnkz44.jpg)
