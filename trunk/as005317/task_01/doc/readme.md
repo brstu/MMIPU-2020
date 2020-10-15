@@ -28,9 +28,9 @@ tasks:
     <img src="images/task2.png" >
 </p>
 
-Display1 отображает последнюю переменную a(i)
+Display1 отображает последнюю переменную a(i);
 
-Display2 отображает наше количество итераций - i
+Display2 отображает наше количество итераций - i;
 
 <p align="center">
     <img src="images/task3.png" >
