@@ -82,7 +82,7 @@ public:
 
 
 
-void PIDorRegulator(const double w,Regulator *reg, Model *lm,double Yinit) {
+void PIDRegulator(const double w,Regulator *reg, Model *lm,double Yinit) {
 	double E = 0.0, Eprev = 0.0, Eprevprev = 0.0;
 	double u = 0, y = Yinit;
 	for (int k = 0; k < 10; k++) {
@@ -99,13 +99,13 @@ void PIDorRegulator(const double w,Regulator *reg, Model *lm,double Yinit) {
 int main() {
 	LinearModel *m = new LinearModel(0.5, 0.8, 1);
 	Regulator* r = new Regulator(10, 10, 50, 0.1);
-	PIDorRegulator(2, r, m, 1);
+	PIDRegulator(2, r, m, 1);
 
 	cout << "\n\n\n\n";
 
 	NonLinearModel* nlm = new NonLinearModel(1, 0.003, 0.5, 8, 1);
 	Regulator* nlr = new Regulator(10, 10, 50, 0.1);
 
-	PIDorRegulator(2, nlr, nlm, 1);
+	PIDRegulator(2, nlr, nlm, 1);
 	return 0;
 }
