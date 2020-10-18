@@ -35,21 +35,19 @@ public:
 class LineirFun : public Model {
 private:
 	float a, b;
-	float y0;
 public:
 	LineirFun(float a, float b) {
 		this->a = a;
 		this->b = b;
 	}
-	float equation(float ut,float y0) override {
-			y0 = a * y0 + b * ut;
-			return y0;
+	float equation(float ut,float yt) override {
+		  return yt = a * yt + b * ut;
 		}
 };
 
 class NonLineirFun : public Model {
 private:
-	float a, b, c, d;
+	float a, b, c, d, y;
 	float prevY = 0;
 	float ut1 = 0;
 public:
@@ -59,20 +57,21 @@ public:
 		this->c = c;
 		this->d = d;
 	}
-	float equation(float ut, float y0) override {
-		y0 = a * y0 - b * pow(prevY, 2) + c * ut + d * sin(ut1);
+	float equation(float ut, float yt) override {
+		y = yt;
+		yt = a * y - b * pow(prevY, 2) + c * ut + d * sin(ut1);
 		ut1 = ut;
-		prevY = y0;
-		return y0;
+		prevY = y;
+		return yt;
 	}
 };
 
-void PIDRegulator(Model &fun, Regulator &reg,float yt) {
-	float y0 = yt;
+void PIDRegulator(Model &fun, Regulator &reg,float y0) {
+	float yt = y0;
 	for (int i = 0; i < 10; i++) {
-		float ut = reg.calculateUt(y0);
-		y0 = fun.equation(ut,y0);
-		cout << y0 << endl;
+		float ut = reg.calculateUt(yt);
+		yt = fun.equation(ut,yt);
+		cout << yt << endl;
 	}
 }
 
