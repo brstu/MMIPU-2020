@@ -36,6 +36,7 @@ private:
 	float a, b, c, d;
 	double Y = 1;
 	double Yprev = 0;
+	double Ynext = 0;
 	double InputWarmPrev = 0;
 public:
 	NonLinearModel(const float a, const float b, const float c, const float d, const float Y) {
@@ -46,13 +47,16 @@ public:
 		this->Y = Y;
 	}
 	float equation(double InputWarm) override {
-		//cout << "Y= " << Y;
-		Y = a * Y - b * pow(Yprev, 2) + c * InputWarm + d * sin(InputWarmPrev);
+		//cout << "Y= " << Y; todo: Ошибка в вычислении
+		//cout << InputWarm << " " << InputWarmPrev << endl;
+		cout << Y << " " << Yprev << endl;
+		Ynext = a * Y - b * pow(Yprev, 2) + c * InputWarm + d * sin(InputWarmPrev);
 
 		Yprev = Y;
+		Y = Ynext;
 		InputWarmPrev = InputWarm;
 
-		return Y;
+		return Ynext;
 	}
 
 };
@@ -89,7 +93,7 @@ void PIDRegulator(const double w,Regulator *reg, Model *lm,double Yinit) {
 		E = w - y;
 		u = reg->getImputWarm(E, Eprev, Eprevprev);
 		y = lm->equation(u);
-
+		//cout << "E= " << E << "U=" << u << "Y=" << y << endl;
 		Eprevprev = Eprev;
 		Eprev = E;
 	}
