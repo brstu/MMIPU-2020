@@ -6,7 +6,7 @@ Demonstrating selecting multiple lines for commenting
 
 # Laboratory work #1
 
-#### Student: Novik  Vadim
+#### Student: Novik Vadim
 
 ###### Task 1. Знакомство с Simulink
 
