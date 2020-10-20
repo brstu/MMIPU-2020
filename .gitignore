@@ -1,12 +1,16 @@
-
-trunk/as005415/task_01/src/.idea/
-
-trunk/as005415/task_01/src/cmake-build-debug/
-
-trunk/as005415/task_01/src/CMakeLists.txt
-
-trunk/as005415/task_01/src/Modeling controlled object/.vs/
-
-trunk/as005415/task_01/src/Modeling controlled object/Debug/
-
-trunk/as005415/task_01/src/Modeling controlled object/Modeling controlled object/Debug/
+# First, ignore everything
+*
+# Now, whitelist anything that's a directory
+!*/
+# Then every file type you are interested in
+!**/*.h
+!**/*.cpp
+!**/*.md
+!**/*.png
+!**/*.sln
+!**/*.vcxproj
+!**/*.vcxproj.filters
+!**/*.vcxproj.user
+# For as005303 cmake
+!**/*.txt
+!**/*.xml
