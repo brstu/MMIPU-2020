@@ -1,21 +1,46 @@
 #include <iostream>
 #include <fstream>
 
+/*!
+	\author Breschuk D.A.
+	\date October 2020
+*/
+
 using namespace std;
 
+/*!
+	\brief Main abstract class
+
+	This is abstract class which include virtual method for chield's classes.  
+*/
 class Model {
 public: 
+	/*!
+	This is virtual method which other classes need for implement
+	\param ut Input Warm
+	\param yo Output value
+    */
 	virtual float equation(float ut,float y0) = 0;
 };
 
+/*!
+	\brief Regulator class
+
+	This is Regulator class which include method for calculate input warm(ut)
+*/
 class Regulator {
 private:
 	float wt,TD,T0,T,K;
-	float uk = 0;
+	float ut = 0;
 	float ek1 = 0;
 	float ek2 = 0;
 	float ek = 0;
 public:
+	/*!
+	Constructor for Regulator
+	  \param TD,TO,T,K coefficients
+	  \param wt desired value
+*/
 	Regulator(float wt,float TD,float T0, float T, float K) {
 		this->wt = wt;
 		this->K = K;
@@ -23,44 +48,113 @@ public:
 		this->T0 = T0;
 		this->TD = TD;
 	}
+	/*!
+	This function calculates our linear model
+		\param ut Input Warm(calculated value)
+		\param &file It's a file for construct Excel table
+		\return ut calculated value
+
+		Function code:
+	 \code
 	float calculateUt(float yt, ofstream &file) {
 		float q0 = K * (1.0 + (TD / T0));
 		float q1 = -K * (1.0 + (2.0 * TD / T0) - (T0 / T));
 		float q2 = K * (TD / T0);
 		file << "," << ek << endl;
 		ek = wt - yt;
-		uk += (q0 * ek) + (q1 * ek1) + (q2 * ek2);
+		ut += (q0 * ek) + (q1 * ek1) + (q2 * ek2);
 		ek2 = ek1;
 		ek1 = ek;
-		return uk;
+		return ut;
+	}
+	\endcode
+		*/
+	float calculateUt(float yt, ofstream &file) {
+		float q0 = K * (1.0 + (TD / T0));
+		float q1 = -K * (1.0 + (2.0 * TD / T0) - (T0 / T));
+		float q2 = K * (TD / T0);
+		file << "," << ek << endl;
+		ek = wt - yt;
+		ut += (q0 * ek) + (q1 * ek1) + (q2 * ek2);
+		ek2 = ek1;
+		ek1 = ek;
+		return ut;
 	}
 };
 
+/*!
+	\brief Linear function class
+
+	It's a linear function class which include method for calculate linear function.
+*/
 class LineirFun : public Model {
 private:
 	float a, b;
 public:
+	/*!
+	Constructor for Linear function class
+	  \param a,b coefficients
+    */
 	LineirFun(float a, float b) {
 		this->a = a;
 		this->b = b;
 	}
+	/*!
+	This function calculates our linear model
+		\param ut Input Warm
+		\param yt Output variable
+		\return yt calculated value
+
+		Function code:
+	 \code
+	float equation(float ut,float yt) override {
+		  return yt = a * yt + b * ut;
+		}
+	 \endcode
+		*/
 	float equation(float ut,float yt) override {
 		  return yt = a * yt + b * ut;
 		}
 };
 
+/*!
+	\brief NonLineer function class
+
+	This is nonlinear function class which include method for calculate nonlinear function.
+*/
 class NonLineirFun : public Model {
 private:
 	float a, b, c, d, y;
 	float prevY = 0;
 	float ut1 = 0;
 public:
+	/*!
+	Constructor for Nonlinear function class
+	  \param a,b,c,d coefficients
+    */
 	NonLineirFun(float a, float b, float c, float d) {
 		this->a = a;
 		this->b = b;
 		this->c = c;
 		this->d = d;
 	}
+	/*!
+     This function calculates our nonlinear model
+        \param ut Input Warm
+        \param yt Output variable
+        \return yt calculated value
+
+     Function code:
+     \code
+	float equation(float ut, float yt) override {
+		y = yt;
+		yt = a * y - b * pow(prevY, 2) + c * ut + d * sin(ut1);
+		ut1 = ut;
+		prevY = y;
+		return yt;
+	}
+	 \endcode
+*/
 	float equation(float ut, float yt) override {
 		y = yt;
 		yt = a * y - b * pow(prevY, 2) + c * ut + d * sin(ut1);
@@ -70,6 +164,12 @@ public:
 	}
 };
 
+/*!
+This function starts our PID regulator
+\param Model some model(linear or nonlinear)
+\param Regulator our regulator
+\param y0 initial yt value
+*/
 void PIDRegulator(Model &fun, Regulator &reg,float y0) {
 	float yt = y0;
 	float ut = 0;
@@ -84,6 +184,7 @@ void PIDRegulator(Model &fun, Regulator &reg,float y0) {
 	file.close();
 }
 
+/// Main function which includes all variables(coefficients), objects, and functions calls. 
 int main() {
 	float wt = 4;
 	float a = 0.3;
