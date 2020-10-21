@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -9,10 +10,11 @@ public:
 
 class Regulator {
 private:
-	float wt,TD,T0,T,K,ek;
+	float wt,TD,T0,T,K;
 	float uk = 0;
 	float ek1 = 0;
 	float ek2 = 0;
+	float ek = 0;
 public:
 	Regulator(float wt,float TD,float T0, float T, float K) {
 		this->wt = wt;
@@ -21,12 +23,12 @@ public:
 		this->T0 = T0;
 		this->TD = TD;
 	}
-	float calculateUt(float yt) {
+	float calculateUt(float yt, ofstream &file) {
 		float q0 = K * (1.0 + (TD / T0));
 		float q1 = -K * (1.0 + (2.0 * TD / T0) - (T0 / T));
 		float q2 = K * (TD / T0);
+		file << "," << ek << endl;
 		ek = wt - yt;
-		//cout << ek << "    " << ek1 << "     " << ek2 << endl;
 		uk += (q0 * ek) + (q1 * ek1) + (q2 * ek2);
 		ek2 = ek1;
 		ek1 = ek;
@@ -70,17 +72,22 @@ public:
 
 void PIDRegulator(Model &fun, Regulator &reg,float y0) {
 	float yt = y0;
+	float ut = 0;
+	ofstream file;
+	file.open("D:\\file.csv");
 	for (int i = 0; i < 1000; i++) {
-		float ut = reg.calculateUt(yt);
+		file << i << "," << yt << "," << ut;
+		ut = reg.calculateUt(yt, file);
 		yt = fun.equation(ut,yt);
 		cout << "Yt = " << yt << "  Ut = " << ut << endl;
 	}
+	file.close();
 }
 
 int main() {
 	float wt = 4;
 	float a = 0.3;
-	float b = 0.1;
+	float b = 0.001;
 	float a1 = 0.3;
 	float b2 = 0.1;
 	float c = 0.1;
