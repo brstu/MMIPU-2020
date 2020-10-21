@@ -204,24 +204,31 @@ int main() {
 ```
 
 ##### Result:
-```w(t) = 4```
+```w(t) = 4 K = 0.1 T0 = 10 TD = 50 T = 10```
+
 ##### Linear
+ ```a = 0.3 b = 0.1```
 <p align="center">
     <img src="img/weq4yeq1lin.png">
 </p>
 
 ##### Nonlinear
+```a = 0.3 b = 0.1 c = 0.1 d = 0.1```
 <p align="center">
     <img src="img/weq4yeq1nonlin.png">
 </p>
 
-```w(t) = 25```
+
+```w(t) = 25 K = 0.1 T0 = 10 TD = 50 T = 10```
 ##### Linear
+ ```a = 0.3 b = 0.1```
 <p align="center">
     <img src="img/weq25yeq1lin.png">
 </p>
 
+
 ##### Nonlinear
+```a = 0.3 b = 0.0001 c = 0.01 d = 0.1```
 <p align="center">
     <img src="img/weq25yeq1nonlin.png">
 </p>
