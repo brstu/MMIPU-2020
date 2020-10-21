@@ -56,7 +56,7 @@
 | 9. Maxim Makarevich     | Markdown.:heavy_check_mark:                     | :x:        | :x:                       |                      |
 | 10. Hanna Akalatovich   | GitHub commits.:heavy_check_mark:               | :x:        | :x:                       |                      |
 | 11. Vitali Rakhlei      | Control System.:heavy_check_mark:               | :x:        | :x:                       |                      |
-| 12. Alexander Safrin    | VS Code with GitHub.:x:                         | :x:        | :x:                       |                      |
+| 12. Alexander Safrin    | VS Code on GitHub.:x:                           | :x:        | :x:                       |                      |
 | 13. Ivan Sliunin        | Dockers.:x:                                     | :x:        | :x:                       |                      |
 | 14. Zakhar Sytoi        | GitHub.:heavy_check_mark:                       | :x:        | :x:                       |                      |
 | 15. Mark Shestakov      | Hello World example with Git.:heavy_check_mark: | :x:        | :x:                       |                      |
