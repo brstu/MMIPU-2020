@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 class Model {
@@ -25,6 +26,7 @@ public:
 		float q1 = -K * (1.0 + (2.0 * TD / T0) - (T0 / T));
 		float q2 = K * (TD / T0);
 		ek = wt - yt;
+		//cout << ek << "    " << ek1 << "     " << ek2 << endl;
 		uk += (q0 * ek) + (q1 * ek1) + (q2 * ek2);
 		ek2 = ek1;
 		ek1 = ek;
@@ -68,25 +70,25 @@ public:
 
 void PIDRegulator(Model &fun, Regulator &reg,float y0) {
 	float yt = y0;
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 1000; i++) {
 		float ut = reg.calculateUt(yt);
 		yt = fun.equation(ut,yt);
-		cout << yt << endl;
+		cout << "Yt = " << yt << "  Ut = " << ut << endl;
 	}
 }
 
 int main() {
-	float wt = 2;
-	float a = 1;
-	float b = 0.003;
-	float a1 = 0.5;
-	float b2 = 0.8;
-	float c = 0.5;
-	float d = 8;
+	float wt = 4;
+	float a = 0.3;
+	float b = 0.1;
+	float a1 = 0.3;
+	float b2 = 0.1;
+	float c = 0.1;
+	float d = 0.1;
 	float T0 = 10;
-	float T = 0.1;
+	float T = 10;
 	float TD = 50;
-	float K = 10;
+	float K = 0.1;
 	float y0 = 1;
 	LineirFun *linear = new LineirFun(a1,b2);
 	Regulator *reg = new Regulator(wt,TD,T0,T,K);
