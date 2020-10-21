@@ -1,6 +1,6 @@
 ﻿#include<iostream>
 #include<math.h>
-#include<vector>
+#include<fstream>
 
 using namespace std;
 
@@ -49,7 +49,7 @@ public:
 	float equation(double InputWarm) override {
 		//cout << "Y= " << Y; todo: Ошибка в вычислении
 		//cout << InputWarm << " " << InputWarmPrev << endl;
-		cout << Y << " " << Yprev << endl;
+		//cout<<Ynext << " " << Y << " " << Yprev << endl;
 		Ynext = a * Y - b * pow(Yprev, 2) + c * InputWarm + d * sin(InputWarmPrev);
 
 		Yprev = Y;
@@ -89,27 +89,39 @@ public:
 void PIDRegulator(const double w,Regulator *reg, Model *lm,double Yinit) {
 	double E = 0.0, Eprev = 0.0, Eprevprev = 0.0;
 	double u = 0, y = Yinit;
-	for (int k = 0; k < 10; k++) {
+	//ofstream foutE("E.txt");
+	//ofstream foutU("U.txt");
+	//ofstream foutY("Y.txt");
+	for (int k = 0; k < 10000; k++) {
 		E = w - y;
 		u = reg->getImputWarm(E, Eprev, Eprevprev);
 		y = lm->equation(u);
-		//cout << "E= " << E << "U=" << u << "Y=" << y << endl;
+		
+		//cout << E << " " << y << " " << u << endl;
+		//foutE << E << endl;
+		//foutU << u << endl;
+		//foutY << y << endl;
+
+
 		Eprevprev = Eprev;
 		Eprev = E;
 	}
+	//foutE.close();
+	//foutU.close();
+	//foutY.close();
 }
 
 
 int main() {
-	LinearModel *m = new LinearModel(0.5, 0.8, 1);
-	Regulator* r = new Regulator(10, 10, 50, 0.1);
-	PIDRegulator(2, r, m, 1);
+	LinearModel *m = new LinearModel(0.3, 0.1, 1);
+	Regulator* r = new Regulator(0.1, 10, 50, 10);
+	PIDRegulator(25, r, m, 1);
 
 	cout << "\n\n\n\n";
 
-	NonLinearModel* nlm = new NonLinearModel(1, 0.003, 0.5, 8, 1);
-	Regulator* nlr = new Regulator(10, 10, 50, 0.1);
+	NonLinearModel* nlm = new NonLinearModel(0.3, 0.0001, 0.01, 0.1, 1);
+	Regulator* nlr = new Regulator(0.1, 10, 50, 10);
 
-	PIDRegulator(2, nlr, nlm, 1);
+	PIDRegulator(25, nlr, nlm, 1);
 	return 0;
 }
