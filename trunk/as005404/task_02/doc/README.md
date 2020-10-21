@@ -5,7 +5,7 @@
 
 Write program (C++), that models PID - controller.
 
-Linear and nonlinear models:
+PID - controller:
 
 <p align="center">
     <img src="img/1.png">
@@ -147,23 +147,23 @@ int main() {
 
 ##### Result:
 ```w(t) = 4```
-###### Linear
+##### Linear
 <p align="center">
     <img src="img/weq4yeq1lin.png">
 </p>
 
-###### Nonlinear
+##### Nonlinear
 <p align="center">
     <img src="img/weq4yeq1nonlin.png">
 </p>
 
 ```w(t) = 25```
-###### Linear
+##### Linear
 <p align="center">
     <img src="img/weq25yeq1lin.png">
 </p>
 
-###### Nonlinear
+##### Nonlinear
 <p align="center">
     <img src="img/weq25yeq1nonlin.png">
 </p>
