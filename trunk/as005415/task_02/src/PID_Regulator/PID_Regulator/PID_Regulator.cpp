@@ -54,7 +54,7 @@ class Regulator
 {
 private:
     double K, T, TD, T0;
-    double u_t = 0;
+    double u_t = 0.0;
 public:
     Regulator(double K, double T, double TD, double T0)
     {
@@ -77,14 +77,14 @@ public:
 
     void Start_PID_Regulator(double w, Model* model, double y_t)
     {
-        double e = 0.0, e_0 = 0.0, e_00 = 0.0, u_t = 0.0;
+        double e = 0.0, e_0 = 0.0, e_00 = 0.0;
 
         for (int i = 0; i < 1000; i++)
         {
-            cout << "e: " << e << "\ty: " << y_t << "\tu: " << u_t << "\n";
+            cout  << e << " " << y_t << " " << u_t << "\n";
 
             e = w - y_t;
-            u_t = get_U_t(e, e_0, e_00);
+            get_U_t(e, e_0, e_00);
             y_t = model->equation(u_t, y_t);
 
             e_00 = e_0;
@@ -96,14 +96,14 @@ public:
 int main()
 {
     Regulator* regulator = new Regulator(0.1, 10.0, 50.0, 10.0);
-    Linear_Model* linear_model = new Linear_Model(1.0, 0.003);
-    regulator->Start_PID_Regulator(2, linear_model, 1);
+    Linear_Model* linear_model = new Linear_Model(0.3, 0.05);
+    regulator->Start_PID_Regulator(25, linear_model, 0);
 
     cout << "\n\n";
 
     Regulator* regulator2 = new Regulator(0.1, 10.0, 50.0, 10.0);
-    Non_Linear_Model* non_linear_model = new Non_Linear_Model(0.1,0.3,0.1,0.1);
-    regulator2->Start_PID_Regulator(2, non_linear_model, 1);
+    Non_Linear_Model* non_linear_model = new Non_Linear_Model(0.3, 0.0001, 0.1, 0.0001);
+    regulator2->Start_PID_Regulator(25, non_linear_model, 0);
 
     return 0;
 }
