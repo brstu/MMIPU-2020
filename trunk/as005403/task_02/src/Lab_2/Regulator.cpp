@@ -19,22 +19,26 @@ double Regulator::get_Ut(const double E, const double E0, const double E0prev)
 	return U;
 }
 
-void Regulator::PIDRegulator(const double w, Regulator * reg, Model * lm, double Yinit,fstream& file)
+void Regulator::PIDRegulator(const double w, Regulator * reg, Model * lm, double Yinit)
 {
 	double E = 0.0, Eprev = 0.0, Eprevprev = 0.0;
 	double u = 0, y = Yinit;
 
-//	file.open("file.csv", ios::out | ios::app | ios::in);
+	fstream file;
+	file.open("file.csv", ios::out | ios::app | ios::in);
+	file << "¹,E,U,Y" << endl;
 
 	for (int k = 0; k < 1000; k++) {
 		E = w - y;
 		u = reg->get_Ut(E, Eprev, Eprevprev);
 		y = lm->equation(u);
 
-//		file << k << "," << E << "," << U << "," << y << "\n";
+		file << k << "," << E << "," << U << "," << y << "\n";
 
 		Eprevprev = Eprev;
 		Eprev = E;
 	}
+	file << "\n\n\n\n\n";
+	file.close();
 }
 

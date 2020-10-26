@@ -18,27 +18,30 @@
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Regulator.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Linear.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="NonLinear.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Regulator.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Regulator.h">
+    <None Include="file.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Linear.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Model.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Linear.h">
+    <ClInclude Include="NonLinear.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="NonLinear.h">
+    <ClInclude Include="Regulator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

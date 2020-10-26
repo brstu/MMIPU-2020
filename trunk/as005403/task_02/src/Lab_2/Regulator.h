@@ -9,5 +9,5 @@ private:
 public:
 	Regulator(const double K, const double T0, const double TD, const double T);
 	double get_Ut(const double E, const double E0 = 0, const double E0prev = 0);
-	void PIDRegulator(const double w, Regulator *reg, Model *lm, double Yinit,fstream& file);
+	void PIDRegulator(const double w, Regulator *reg, Model *lm, double Yinit);
 };

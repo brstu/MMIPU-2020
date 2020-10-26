@@ -121,6 +121,9 @@
     <ClCompile Include="Regulator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="file.csv" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="Linear.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="NonLinear.h" />
