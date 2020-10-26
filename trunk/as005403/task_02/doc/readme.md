@@ -23,11 +23,11 @@ PID - controller:
 ##### Linear
  ```a = 0.3 b = 0.1```
 <p align="center">
-    <img src="img/weq4yeq1lin.png">
+    <img src="img/LinearGraph.png">
 </p>
 
 ##### Nonlinear
 ```a = 0.3 b = 0.1 c = 0.1 d = 0.1```
 <p align="center">
-    <img src="img/weq4yeq1nonlin.png">
+    <img src="img/NonlinearGraph.png">
 </p>
