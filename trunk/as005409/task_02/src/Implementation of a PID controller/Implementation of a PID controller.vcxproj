@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0e4c9167-4f36-4de9-9ea8-c83e1b649e1a}</ProjectGuid>
-    <RootNamespace>task1</RootNamespace>
+    <ProjectGuid>{3f5029ab-bd54-40af-989e-e1b872bdb484}</ProjectGuid>
+    <RootNamespace>ImplementationofaPIDcontroller</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
