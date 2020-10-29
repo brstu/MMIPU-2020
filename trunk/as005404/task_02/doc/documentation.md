@@ -2,10 +2,10 @@
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`class `[`LinearModel`](#class_linear_model) | class that implements Object of Control
-`class `[`Model`](#class_model) | class that implements Object of Control
-`class `[`NonLinearModel`](#class_non_linear_model) | class that implements Object of Control
-`class `[`Regulator`](#class_regulator) | class that implements [Regulator](#class_regulator) Gr
+`class `[`LinearModel`](#class-LinearModel ) | class that implements Object of Control
+`class `[`Model`](#class-Model) | class that implements Object of Control
+`class `[`NonLinearModel`](#class-NonLinearModel ) | class that implements Object of Control
+`class `[`Regulator`](#class-Regulator) | class that implements [Regulator](#class-Regulator) Gr
 
 # class `LinearModel` 
 
@@ -16,7 +16,7 @@ class LinearModel
 
 class that implements Object of Control
 
-this class extends parent class [Model](#class_model) and implements Linear [Model](#class_model)
+this class extends parent class [Model](#class-model) and implements Linear [Model](#class-model)
 
 ## Summary
 
@@ -29,7 +29,7 @@ this class extends parent class [Model](#class_model) and implements Linear [Mod
 
 #### `public inline  `[`LinearModel`](#class_linear_model_1ac55488370c5ad720b687ff893c9c340e)`(const float a,const float b,const double Y)` 
 
-Constructor for [NonLinearModel](#class_non_linear_model) class 
+Constructor for [NonLinearModel](#class-NonLinearModel) class 
 #### Parameters
 * `a` `b` coefficients 
 
@@ -73,7 +73,7 @@ class NonLinearModel
 
 class that implements Object of Control
 
-this class extends parent class [Model](#class_model) and implements Nonlinear [Model](#class_model)
+this class extends parent class [Model](#class-model) and implements Nonlinear [Model](#class-model)
 
 ## Summary
 
