@@ -2,17 +2,17 @@
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`class `[`LineirFun`](#class_lineir_fun) | Linear function class.
-`class `[`Model`](#class_model) | Main abstract class.
-`class `[`NonLineirFun`](#class_non_lineir_fun) | NonLineer function class.
-`class `[`Regulator`](#class_regulator) | [Regulator](#class_regulator) class.
+`class `[`LineirFun`](#class-lineirfun) | Linear function class.
+`class `[`Model`](#class-model) | Main abstract class.
+`class `[`NonLineirFun`](#class-nonlineirfun) | NonLineer function class.
+`class `[`Regulator`](#class-regulator) | [Regulator](#class-regulator) class. 
 
 # class `LineirFun` 
 
 ```
 class LineirFun
   : public Model
-```  
+```
 
 Linear function class.
 
@@ -20,20 +20,20 @@ It's a linear function class which include method for calculate linear function.
 
 ## Summary
 
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-`public inline  `[`LineirFun`](#class_lineir_fun_1a5f7c51a7e6b032f00e43796f8bd80b04)`(float a,float b)` | Constructor for Linear function class 
-`public inline virtual float `[`equation`](#class_lineir_fun_1a7ed38c11cd386e07657f32d858e6c9ba)`(float ut,float yt)` | This function calculates our linear model 
+ Members                                                      | Descriptions                              
+ ------------------------------------------------------------ | ----------------------------------------- 
+ `public inline  `[`LineirFun`](#class-lineirfun)`(float a,float b)` | Constructor for Linear function class     
+ `public inline virtual float `[`equation`](#class-lineirfun)`(float ut,float yt)` | This function calculates our linear model 
 
 ## Members
 
-#### `public inline  `[`LineirFun`](#class_lineir_fun_1a5f7c51a7e6b032f00e43796f8bd80b04)`(float a,float b)` 
+#### `public inline  `[`LineirFun`](#class-lineirfun)`(float a,float b)` 
 
 Constructor for Linear function class 
 #### Parameters
 * `a` `b` coefficients
 
-#### `public inline virtual float `[`equation`](#class_lineir_fun_1a7ed38c11cd386e07657f32d858e6c9ba)`(float ut,float yt)` 
+#### `public inline virtual float `[`equation`](#class-lineirfun)`(float ut,float yt)` 
 
 This function calculates our linear model 
 #### Parameters
@@ -59,13 +59,13 @@ This is abstract class which include virtual method for chield's classes.
 
 ## Summary
 
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-`public float `[`equation`](#class_model_1ae4679a6c3c770b1b66621f95d53566d9)`(float ut,float y0)` | This is virtual method which other classes need for implement 
+ Members                                                      | Descriptions                                                 
+ ------------------------------------------------------------ | ------------------------------------------------------------ 
+ `public float `[`equation`](#class-model)`(float ut,float y0)` | This is virtual method which other classes need for implement 
 
 ## Members
 
-#### `public float `[`equation`](#class_model_1ae4679a6c3c770b1b66621f95d53566d9)`(float ut,float y0)` 
+#### `public float `[`equation`](#class-model)`(float ut,float y0)` 
 
 This is virtual method which other classes need for implement 
 #### Parameters
@@ -78,7 +78,7 @@ This is virtual method which other classes need for implement
 ```
 class NonLineirFun
   : public Model
-```  
+```
 
 NonLineer function class.
 
@@ -86,20 +86,20 @@ This is nonlinear function class which include method for calculate nonlinear fu
 
 ## Summary
 
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-`public inline  `[`NonLineirFun`](#class_non_lineir_fun_1a2ceea0cb312ae84ce5a866b4ec757e9c)`(float a,float b,float c,float d)` | Constructor for Nonlinear function class 
-`public inline virtual float `[`equation`](#class_non_lineir_fun_1a143ef18fce91f54c6d9087ef53c166f2)`(float ut,float yt)` | This function calculates our nonlinear model 
+ Members                                                      | Descriptions                                 
+ ------------------------------------------------------------ | -------------------------------------------- 
+ `public inline  `[`NonLineirFun`](#class-nonlineirfun)`(float a,float b,float c,float d)` | Constructor for Nonlinear function class     
+ `public inline virtual float `[`equation`](#class-nonlineirfun)`(float ut,float yt)` | This function calculates our nonlinear model 
 
 ## Members
 
-#### `public inline  `[`NonLineirFun`](#class_non_lineir_fun_1a2ceea0cb312ae84ce5a866b4ec757e9c)`(float a,float b,float c,float d)` 
+#### `public inline  `[`NonLineirFun`](#class-nonlineirfun)`(float a,float b,float c,float d)` 
 
 Constructor for Nonlinear function class 
 #### Parameters
 * `a` `b` `c` `d` coefficients
 
-#### `public inline virtual float `[`equation`](#class_non_lineir_fun_1a143ef18fce91f54c6d9087ef53c166f2)`(float ut,float yt)` 
+#### `public inline virtual float `[`equation`](#class-nonlineirfun)`(float ut,float yt)` 
 
 This function calculates our nonlinear model 
 #### Parameters
@@ -123,28 +123,28 @@ float equation(float ut, float yt) override {
 
 # class `Regulator` 
 
-[Regulator](#class_regulator) class.
+[Regulator](#class-regulator) class.
 
-This is [Regulator](#class_regulator) class which include method for calculate input warm(ut)
+This is [Regulator](#class-regulator) class which include method for calculate input warm(ut)
 
 ## Summary
 
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-`public inline  `[`Regulator`](#class_regulator_1af3732f7a7badaf070e9ff4f67943f6ec)`(float wt,float TD,float T0,float T,float K)` | Constructor for [Regulator](#class_regulator)
-`public inline float `[`calculateUt`](#class_regulator_1af40765881b701abfa6c467acb48106e4)`(float yt,ofstream & file)` | This function calculates our linear model 
+ Members                                                      | Descriptions                                  
+ ------------------------------------------------------------ | --------------------------------------------- 
+ `public inline  `[`Regulator`](#class-regulator)`(float wt,float TD,float T0,float T,float K)` | Constructor for [Regulator](#class-regulator) 
+ `public inline float `[`calculateUt`](#class-regulator)`(float yt,ofstream & file)` | This function calculates our linear model     
 
 ## Members
 
-#### `public inline  `[`Regulator`](#class_regulator_1af3732f7a7badaf070e9ff4f67943f6ec)`(float wt,float TD,float T0,float T,float K)` 
+#### `public inline  `[`Regulator`](#class-regulator)`(float wt,float TD,float T0,float T,float K)` 
 
-Constructor for [Regulator](#class_regulator)
+Constructor for [Regulator](#class-regulator)
 #### Parameters
 * `TD` `TO` `T` `K` coefficients 
 
 * `wt` desired value
 
-#### `public inline float `[`calculateUt`](#class_regulator_1af40765881b701abfa6c467acb48106e4)`(float yt,ofstream & file)` 
+#### `public inline float `[`calculateUt`](#class-regulator)`(float yt,ofstream & file)` 
 
 This function calculates our linear model 
 #### Parameters
