@@ -2,9 +2,9 @@
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`class `[`LineirFun`](#class_lineir_fun) | Linear function class.
+`class `[`LineirFun`](#class_lineirfun) | Linear function class.
 `class `[`Model`](#class_model) | Main abstract class.
-`class `[`NonLineirFun`](#class_non_lineir_fun) | NonLineer function class.
+`class `[`NonLineirFun`](#class_nonlineirfun) | NonLineer function class.
 `class `[`Regulator`](#class_regulator) | [Regulator](#class_regulator) class.
 
 # class `LineirFun` 
@@ -12,7 +12,7 @@
 ```
 class LineirFun
   : public Model
-```  
+```
 
 Linear function class.
 
@@ -78,7 +78,7 @@ This is virtual method which other classes need for implement
 ```
 class NonLineirFun
   : public Model
-```  
+```
 
 NonLineer function class.
 
