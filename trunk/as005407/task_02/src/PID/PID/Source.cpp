@@ -1,3 +1,7 @@
+/**libraries definitions
+There are some libraries
+that were used in that project
+*/
 #include <iostream>
 #include <math.h>
 #include "Linear.h"
@@ -5,11 +9,12 @@
 #include "Non_linear.h"
 #include "Reg.h"
 
-
 using std::cout;
 
-
-
+/**In main() function we calculate
+both linear and non-linear equations
+for PID-regulator
+*/
 int main()
 {
 	

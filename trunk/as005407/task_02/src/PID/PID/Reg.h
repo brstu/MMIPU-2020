@@ -1,5 +1,6 @@
 #pragma once
 #include "Model.h"
+///Regulaton class
 class Regulate {
 public:
 	float K = 0.1, T = 10, TD = 50, T0 = 10, u_t = 0.0;

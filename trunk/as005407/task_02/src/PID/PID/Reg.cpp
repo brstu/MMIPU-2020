@@ -1,7 +1,7 @@
 #include "Reg.h"
 #include <iostream>
 using std::cout;
-
+///Regulate class methods
 float Regulate::get_U_t(float e, float e_0, float e_00)
 {
 	float q0 = K * (1 + TD / T0);

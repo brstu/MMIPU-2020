@@ -1,4 +1,5 @@
 #pragma once
+///Inheritance class
 class Model
 {
 public:
