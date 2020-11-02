@@ -154,8 +154,8 @@ int main()
 ```
 **Result:**<br>
 **Linear model**<br>
-<img src="img/ln1.png" alt="Result"><br>
+<img src="img/lm1.png" alt="Result"><br>
 **Non-linear model**<br>
-<img src="img/nln1.png" alt="Result"><br>
+<img src="img/nlm1.png" alt="Result"><br>
 
 **Conclusion:** During this laboratory work I have created C++ program that simulates PID regulator's work.
