@@ -1,4 +1,4 @@
-## Laboratory work #1
+## Laboratory work #2
 ### Alina Grigoruk, AS-54f
 **Aim:** To create C++ program that simulates work of PID regulator.<br>
 **Code:**<br>
