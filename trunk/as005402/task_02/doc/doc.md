@@ -7,7 +7,7 @@
 `class `[`NonLinearModel`](#class_non_linear_model) | class that represents non-linear model of controlled object
 `class `[`Regulator`](#class_regulator) | class for regulator implementation
 
-# class `LinearModel` 
+# class `LinearModel` {#class_linear_model}
 
 ```
 class LinearModel
@@ -44,7 +44,7 @@ function that calculates y
 #### Returns
 y new value of y
 
-# class `Model` 
+# class `Model` {#class_model}
 
 template for constructing object of control
 
@@ -66,7 +66,7 @@ abstract function to be overridden
 
 * `y` output value
 
-# class `NonLinearModel` 
+# class `NonLinearModel` {#class_non_linear_model}
 
 ```
 class NonLinearModel
@@ -103,7 +103,7 @@ function that calculates y
 #### Returns
 y1 new value of y
 
-# class `Regulator` 
+# class `Regulator` {#class_regulator}
 
 class for regulator implementation
 
