@@ -2,7 +2,7 @@
 
 ## Rakhlei Vitali
 
-#### controlobject.cpp:
+#### controlobject.cpp [[return](https://github.com/as005411/MMIPU-2020/tree/dev/trunk/as005411/task_02/doc#controlobjecth-full)]:
 
 ```c++
 #include "controlobject.h"
@@ -29,7 +29,7 @@ controlobject& controlobject::operator=(const controlobject*& other)
 }
 ```
 
-#### linear.cpp
+#### linear.cpp [[return](https://github.com/as005411/MMIPU-2020/tree/dev/trunk/as005411/task_02/doc#controlobjecth-full)]:
 
 ```c++
 #include "linear.h"
@@ -49,7 +49,7 @@ double& linear::eq(const double &iu)
 }
 ```
 
-#### nonlinear.cpp
+#### nonlinear.cpp [[return](https://github.com/as005411/MMIPU-2020/tree/dev/trunk/as005411/task_02/doc#controlobjecth-full)]:
 
 ```c++
 #include "nonlinear.h"
@@ -72,7 +72,7 @@ double &nonlinear::eq(const double &iu)
 }
 ```
 
-#### regulator.cpp
+#### regulator.cpp [[return](https://github.com/as005411/MMIPU-2020/tree/dev/trunk/as005411/task_02/doc#regulatorh-full)]:
 
 ```c++
 #include "regulator.h"
@@ -107,7 +107,7 @@ double &regulator::eq(const double &iek)
 }
 ```
 
-#### model.cpp
+#### model.cpp [[return](https://github.com/as005411/MMIPU-2020/tree/dev/trunk/as005411/task_02/doc#modelh-full)]:
 
 ```c++
 #include "model.h"

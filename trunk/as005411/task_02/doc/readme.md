@@ -8,7 +8,7 @@
 
 ## Code:
 
-#### main.cpp:
+#### main.cpp
 
 ```c++
 #include <iostream>
@@ -52,7 +52,7 @@ int main()
 }
 ```
 
-#### controlobject.h:
+#### controlobject.h [[full](https://github.com/as005411/MMIPU-2020/tree/dev/trunk/as005411/task_02/doc/add#controlobjectcpp-return)]:
 
 ```c++
 #ifndef CONTROLOBJECT_H
@@ -84,7 +84,7 @@ public:
 #endif // CONTROLOBJECT_H
 ```
 
-#### linear.h:
+#### linear.h [[full](https://github.com/as005411/MMIPU-2020/tree/dev/trunk/as005411/task_02/doc/add#linearcpp-return)]:
 
 ```c++
 #ifndef LINEAR_H
@@ -112,7 +112,7 @@ public:
 #endif // LINEAR_H
 ```
 
-#### nonlinear.h
+#### nonlinear.h [[full](https://github.com/as005411/MMIPU-2020/tree/dev/trunk/as005411/task_02/doc/add#nonlinearcpp-return)]:
 
 ```c++
 #ifndef NONLINEAR_H
@@ -144,7 +144,7 @@ public:
 
 ```
 
-#### regulator.h:
+#### regulator.h [[full](https://github.com/as005411/MMIPU-2020/tree/dev/trunk/as005411/task_02/doc/add#regulatorcpp-return)]:
 
 ```c++
 #ifndef REGULATOR_H
@@ -191,7 +191,7 @@ public:
 
 ```
 
-#### model.h:
+#### model.h [[full](https://github.com/as005411/MMIPU-2020/tree/dev/trunk/as005411/task_02/doc/add#modelcpp-return)]:
 
 ```c++
 #ifndef REGULATOR_H
@@ -239,6 +239,8 @@ public:
 ```
 
 
+
+### [Doxygen documentation](doxy#summary)
 
 ## Result:
 
