@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4f4e2fb4-08dc-41b6-8938-3feed636d58e}</ProjectGuid>
-    <RootNamespace>PITRegulator</RootNamespace>
+    <ProjectGuid>{b91c213b-f914-4029-9a8b-0c19ebe5932c}</ProjectGuid>
+    <RootNamespace>PIDRegulator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PIT-Regulator.cpp" />
+    <ClCompile Include="PID Regulator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

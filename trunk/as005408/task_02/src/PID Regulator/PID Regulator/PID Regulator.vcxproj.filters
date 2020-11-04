@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PIT-Regulator.cpp">
+    <ClCompile Include="PID Regulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
