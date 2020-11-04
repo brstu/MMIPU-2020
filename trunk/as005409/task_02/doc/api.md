@@ -1,0 +1,128 @@
+# Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`class `[`linear`](#classlinear) | class linear inherits the model class, and further in the class the equation function is redefined, which are in the model class.
+`class `[`model`](#classmodel) | class model need to inheritance to linear and nonlinear classes.
+`class `[`nonlinear`](#classnonlinear) | class nonlinear inherits the model class, and further in the class the equation function is redefined, which are in the model class.
+`class `[`regulator`](#classregulator) | class regulator
+
+# class `linear` 
+
+```
+class linear
+  : public model
+```  
+
+class linear inherits the model class, and further in the class the equation function is redefined, which are in the model class.
+
+Also in this class there is a constructor, and class fields are defined for initializing parameters that will be passed to the constructor and will be used in the function
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public inline  `[`linear`](#classlinear_1a78ba85744fb4519b6be8b9d6a46c6b04)`(float a,float b)` | Construct for class linear 
+`public inline virtual float `[`equation`](#classlinear_1a432fa08b596fae03d5e35672827c3f05)`(float yt,float ut)` | Linear equation 
+
+## Members
+
+#### `public inline  `[`linear`](#classlinear_1a78ba85744fb4519b6be8b9d6a46c6b04)`(float a,float b)` 
+
+Construct for class linear 
+#### Parameters
+* `a` `b`
+
+#### `public inline virtual float `[`equation`](#classlinear_1a432fa08b596fae03d5e35672827c3f05)`(float yt,float ut)` 
+
+Linear equation 
+#### Parameters
+* `yt` `ut` 
+
+#### Returns
+result of linear equation
+
+# class `model` 
+
+class model need to inheritance to linear and nonlinear classes.
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public float `[`equation`](#classmodel_1ad698233379332f6841fed6f9deb9d1b4)`(float yt,float ut)` | virtual undefined function that will be overriden in inherited classes \params yt,ut. 
+
+## Members
+
+#### `public float `[`equation`](#classmodel_1ad698233379332f6841fed6f9deb9d1b4)`(float yt,float ut)` 
+
+virtual undefined function that will be overriden in inherited classes \params yt,ut. 
+#### Returns
+0,cuz this function will override in others classes
+
+# class `nonlinear` 
+
+```
+class nonlinear
+  : public model
+```  
+
+class nonlinear inherits the model class, and further in the class the equation function is redefined, which are in the model class.
+
+Also in this class there is a constructor, and class fields are defined for initializing parameters that will be passed to the constructor and will be used in the function
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public inline  `[`nonlinear`](#classnonlinear_1a708563be9535b57626740af2239a370d)`(float a,float b,float c,float d)` | Construct for class nonlinear 
+`public inline virtual float `[`equation`](#classnonlinear_1abbfe2fd3d8eb6f1d536e657975e899fc)`(float yt,float ut)` | NonLinear equation 
+
+## Members
+
+#### `public inline  `[`nonlinear`](#classnonlinear_1a708563be9535b57626740af2239a370d)`(float a,float b,float c,float d)` 
+
+Construct for class nonlinear 
+#### Parameters
+* `a` `b` `c` `d`
+
+#### `public inline virtual float `[`equation`](#classnonlinear_1abbfe2fd3d8eb6f1d536e657975e899fc)`(float yt,float ut)` 
+
+NonLinear equation 
+#### Parameters
+* `yt` `ut` 
+
+#### Returns
+result of nonlinear equation
+
+# class `regulator` 
+
+class regulator
+
+Also in this class there is a constructor, and class fields are defined for initializing parameters that will be passed to the constructor and will be used in the function
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public inline  `[`regulator`](#classregulator_1a7c40ac8810c3d6a4cd583b011d673f78)`(float T,float T0,float TD,float K)` | Construct for class regulator 
+`public inline float `[`warm`](#classregulator_1a2e9544c423ef964dcf6177270dedb073)`(float e,float em1,float em2)` | PID control algorithm 
+
+## Members
+
+#### `public inline  `[`regulator`](#classregulator_1a7c40ac8810c3d6a4cd583b011d673f78)`(float T,float T0,float TD,float K)` 
+
+Construct for class regulator 
+#### Parameters
+* `T` `T0` `TD` `K`
+
+#### `public inline float `[`warm`](#classregulator_1a2e9544c423ef964dcf6177270dedb073)`(float e,float em1,float em2)` 
+
+PID control algorithm 
+#### Parameters
+* `e` `em1` `em2` 
+
+#### Returns
+result of PID control
+
+Generated by [Moxygen](https://sourcey.com/moxygen)
