@@ -1,6 +1,7 @@
 # Laboratory work #2
 
 ### Student: Kunitskiy Alexander
+
 ##### Task 2. PID controller
 
 Write program (C++), that models PID - controller.
@@ -19,9 +20,19 @@ PID - controller:
 #include<math.h>
 #include<fstream>
 
+/**
+	\file in this file i solve task to implement PID - controller
+	\authors Anton Isachenka
+	\version 1.0
+	\date 21.10.2020
+
+*/
+
 using namespace std;
+
 /*!
 	\brief class that implements Object of Control
+
 	abstract class to set needed functions
 */
 class Model
@@ -33,8 +44,11 @@ public:
 	*/
 	virtual float equation(double InputWarm) = 0;
 };
+
+
 /*!
 	\brief class that implements Object of Control
+
 	this class extends parent class Model and implements Linear Model
 */
 class LinearModel : public Model {
@@ -52,6 +66,7 @@ public:
 		this->b = b;
 		this->Y = Y;
 	}
+
 	/*!
 		it calculate Yt via linear method
 		\param ImputWarm output of Regulator
@@ -63,8 +78,10 @@ public:
 		return Y;
 	}
 };
+
 /*!
 	\brief class that implements Object of Control
+
 	this class extends parent class Model and implements Nonlinear Model
 */
 class NonLinearModel : public Model {
@@ -94,12 +111,16 @@ public:
 	*/
 	float equation(double InputWarm) override {
 		Ynext = a * Y - b * pow(Yprev, 2) + c * InputWarm + d * sin(InputWarmPrev);
+
 		Yprev = Y;
 		Y = Ynext;
 		InputWarmPrev = InputWarm;
+
 		return Ynext;
 	}
+
 };
+
 /*!
 	\brief class that implements Regulator Gr
 */
@@ -130,7 +151,10 @@ public:
 		InputWarm += q0 * E + q1 * Eprev + q2 * Eprevprev;
 		return InputWarm;
 	}
+
 };
+
+
 /*!
 	\brief function that models PID controller
 	\param w some desired value
@@ -153,6 +177,8 @@ void PIDRegulator(const double w,Regulator *reg, Model *lm,double Yinit) {
 		//foutE << E << endl;
 		//foutU << u << endl;
 		//foutY << y << endl;
+
+
 		Eprevprev = Eprev;
 		Eprev = E;
 	}
@@ -160,14 +186,19 @@ void PIDRegulator(const double w,Regulator *reg, Model *lm,double Yinit) {
 	//foutU.close();
 	//foutY.close();
 }
+
+
 /// \brief creations of all class' instances and call of PIDRegulator functions
 int main() {
 	LinearModel *m = new LinearModel(0.3, 0.1, 1);
 	Regulator* r = new Regulator(0.1, 10, 50, 10);
 	PIDRegulator(25, r, m, 1);
+
 	cout << "\n\n\n\n";
+
 	NonLinearModel* nlm = new NonLinearModel(0.3, 0.0001, 0.01, 0.1, 1);
 	Regulator* nlr = new Regulator(0.1, 10, 50, 10);
+
 	PIDRegulator(25, nlr, nlm, 1);
 	return 0;
 }
@@ -175,22 +206,28 @@ int main() {
 
 ##### Result:
 ```w(t) = 4 K = 0.1 T0 = 10 TD = 50 T = 10```
+
 ##### Linear
  ```a = 0.3 b = 0.1```
 <p align="center">
     <img src="img/weq4yeq1lin.png">
 </p>
+
 ##### Nonlinear
 ```a = 0.3 b = 0.1 c = 0.1 d = 0.1```
 <p align="center">
     <img src="img/weq4yeq1nonlin.png">
 </p>
+
+
 ```w(t) = 25 K = 0.1 T0 = 10 TD = 50 T = 10```
 ##### Linear
  ```a = 0.3 b = 0.1```
 <p align="center">
     <img src="img/weq25yeq1lin.png">
 </p>
+
+
 ##### Nonlinear
 ```a = 0.3 b = 0.0001 c = 0.01 d = 0.1```
 <p align="center">
