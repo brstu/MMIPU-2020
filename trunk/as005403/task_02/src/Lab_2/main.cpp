@@ -4,8 +4,15 @@
 #include "NonLinear.h"
 #include "Linear.h"
 #include <fstream>
+/**
+	\file in this file i solve task to implement PID - controller
+	\authors Ilya Dobrolinskiy
+	\version 1.0
+	\date 04.10.2020
+*/
 using namespace std;
 
+/// \brief creations of all class' instances
 int main() {
 	float w_t = 4;
 	float a = 0.3, b = 0.1;
