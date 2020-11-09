@@ -128,7 +128,7 @@ int main()
 
 **Non-linear model**<br>
 
-![Screenshot LineModel](img/Non_Linear.png)
+![Screenshot Non_LineModel](img/Non_Linear.png)
 
 **Вывод:** 
 
