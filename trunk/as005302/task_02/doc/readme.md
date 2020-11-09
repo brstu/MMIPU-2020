@@ -8,7 +8,7 @@ Write program (C++), that models PID - controller.
 PID - controller:
 
 <p align="center">
-    <img src="img/schema.png">
+	![Schema](img/schema.png)
 </p>
 
 
@@ -192,11 +192,11 @@ public:
 ##### Linear
  ```a = 0.3 b = 0.1```
 <p align="center">
-    <img src="img/LinearGraphic.png">
+	![LinearGraphic](img/LinearGraphic.png)
 </p>
 
 ##### Nonlinear
 ```a = 0.3 b = 0.1 c = 0.1 d = 0.1```
 <p align="center">
-    <img src="img/NonlinearGraphic.png">
+	![NonLinearGraphic](img/NonlinearGraphic.png)
 </p>
