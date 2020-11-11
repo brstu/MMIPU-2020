@@ -3,6 +3,8 @@
 <h3>Task 2. Modeling PID Regulator</h3>
 Write program (C++), using these formulas and previous ones(from task1).
 
+![alt text](https://github.com/brstu/MMIPU-2020/blob/master/tasks/task_02/images/1.png)
+
 <h5>Code:</h5>
 
 
@@ -261,4 +263,15 @@ int main()
 my Excel died and does not want to make graphics with all my desire
 sorry
 
+
+<h6>But i can show you the result of compiling my program</h6>
+
+![alt text](https://github.com/as005405/MMIPU-2020/blob/master/trunk/as005405/task_02/doc/img/ToHRqZ10GN8.jpg)
+<h6> . </h6>
+<h6> . </h6>
+<h6> . </h6>
+![alt text](https://github.com/as005405/MMIPU-2020/blob/master/trunk/as005405/task_02/doc/img/ToHRqZ10GN8.jpg)
+<h6> . </h6>
+<h6> . </h6>
+<h6> . </h6>
 
