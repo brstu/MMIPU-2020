@@ -2,18 +2,18 @@
 
 Members                                       |     Descriptions                           |
 ----------------------------------------------|--------------------------------------------|
-`class `[`Lineir`](#class-lineir)             |     Linear function class.                 |
-`class `[`Model`](#class-model)               |     Main abstract class.                   |
-`class `[`NonLineir`](#class-nonlineir)       |     NonLineer function class.              |
-`class `[`Regulator`](#class-regulator)       |     [Regulator](#class-regulator) class.   |
+`class `[`lineir`](#class-lineir)             |     Linear function class.                 |
+`class `[`model`](#class-model)               |     Main abstract class.                   |
+`class `[`nonlineir`](#class-nonlineir)       |     NonLineer function class.              |
+`class `[`regulator`](#class-regulator)       |     [regulator](#class-regulator) class.   |
 
 
 
-class Lineir
+class lineir
 
 ```
 class Lineir
-: public Model
+: public model
 ```
 
 Linear function class.
@@ -24,12 +24,12 @@ It's a linear function class which include method for calculate linear function.
 
 Members                                                                           |   Descriptions                              |
 ----------------------------------------------------------------------------------|---------------------------------------------|
-`public inline `[`Lineir`](#class-lineirfun)`(float a,float b)`                   |   Constructor for Linear function class     |
+`public inline `[`lineir`](#class-lineir)`(float a,float b)`                      |   Constructor for Linear function class     |
 `public inline virtual float `[`equation`](#class-lineir)`(float ut,float yt)`    |   This function calculates our linear model |
 
 ## Members
 
-#### `public inline `[`Lineir`](#class-lineir)`(float a,float b)`
+#### `public inline `[`lineir`](#class-lineir)`(float a,float b,float yt_1)`
 
 Constructor for Linear function class
 
@@ -37,7 +37,7 @@ Constructor for Linear function class
 
 * `a` `b` coefficients
 
-#### `public inline virtual float `[`equation`](#class-lineir)`(float ut,float yt)`
+#### `public inline virtual float `[`equation`](#class-lineir)`(float yt,float ut)`
 
 This function calculates our linear model
 #### Parameters
@@ -46,16 +46,17 @@ This function calculates our linear model
 * `ut` Output variable
 
 #### Returns
-ut calculated value
+yt_1 calculated value
 
 Function code:
 ```cpp
-float equation(float ut,float yt) override {
-return yt = a * yt + b * ut;
+float equation(float yt,float ut) override {
+yt_1 = a * yt + b * ut;
+return yt_1
 }
 ```
 
-# class `Model`
+# class `model`
 
 Main abstract class.
 
@@ -69,19 +70,19 @@ Members                                                         |    Description
 
 ## Members
 
-#### `public float `[`equation`](#class-model)`(float ut,float y0)`
+#### `public float `[`equation`](#class-model)`(float ut,float ut)`
 
 This is virtual method which other classes need for implement
 #### Parameters
-* `ut` Input Warm
+* `yt` Input Warm
 
-* `yo` Output value
+* `ut` Output value
 
-# class `NonLineir`
+# class `nonLineir`
 
 ```
-class NonLineir
-: public Model
+class nonlineir
+: public model
 ```
 
 NonLineer function class.
@@ -92,86 +93,84 @@ This is nonlinear function class which include method for calculate nonlinear fu
 
 Members                                                                                  |    Descriptions                                  |
 -----------------------------------------------------------------------------------------|--------------------------------------------------|
-`public inline `[`NonLineirFun`](#class-nonlineirfun)`(float a,float b,float c,float d)` |    Constructor for Nonlinear function class      |
-`public inline virtual float `[`equation`](#class-nonlineirfun)`(float ut,float yt)`     |    This function calculates our nonlinear model  |
+`public inline `[`nonlineir`](#class-nonlineir)`(float a,float b,float c,float d)` |    Constructor for Nonlinear function class      |
+`public inline virtual float `[`equation`](#class-nonlineirfun)`(float yt,float ut)`     |    This function calculates our nonlinear model  |
 
 ## Members
 
-#### `public inline `[`NonLineir`](#class-nonlineir)`(float a,float b,float c,float d)`
+#### `public inline `[`nonlineir`](#class-nonlineir)`(float a,float b,float c,float d)`
 
 Constructor for Nonlinear function class
 #### Parameters
 * `a` `b` `c` `d` coefficients
 
-#### `public inline virtual float `[`equation`](#class-nonlineir)`(float ut,float yt)`
+#### `public inline virtual float `[`equation`](#class-nonlineir)`(float yt,float ut)`
 
 This function calculates our nonlinear model
 #### Parameters
-* `ut` Input Warm
+* `yt` Input Warm
 
-* `yt` Output variable
+* `ut` Output variable
 
 #### Returns
-yt calculated value
+yt_1 calculated value
 
 Function code:
 ```cpp
-float equation(float ut, float yt) override {
-y = yt;
-yt = a * y - b * pow(prevY, 2) + c * ut + d * sin(ut1);
-ut1 = ut;
-prevY = y;
-return yt;
+float equation(float ut, float yt) {
+yt_1 = a * yt - b * pow(yt_0, 2) + c * ut + d * sin(ut_0);
+        ut_0 = ut;
+        yt_0 = yt;
+        yt = yt_1;
+
+        return yt_1;
 }
 ```
 
-# class `Regulator`
+# class `regulator`
 
-[Regulator](#class-regulator) class.
+[regulator](#class-regulator) class.
 
-This is [Regulator](#class-regulator) class which include method for calculate input warm(ut)
+This is [regulator](#class-regulator) class which include method for calculate input warm(ut)
 
 ## Summary
  
 Members                                                                                       |    Descriptions                                   |
 ----------------------------------------------------------------------------------------------|---------------------------------------------------|
-`public inline `[`Regulator`](#class-regulator)`(float wt,float TD,float T0,float T,float K)` |    Constructor for [Regulator](#class-regulator)  |
+`public inline `[`regulator`](#class-regulator)`(float T,float TD,float T0,float yt_1,float K)` |    Constructor for [regulator](#class-regulator)  |
 `public inline float `[`calculateUt`](#class-regulator)`(float yt,ofstream & file)`           |    This function calculates our linear model      |
 
 ## Members
 
-#### `public inline `[`Regulator`](#class-regulator)`(float wt,float TD,float T0,float T,float K)`
+#### `public inline `[`regulator`](#class-regulator)`(float yt_1,float TD,float T0,float T,float K)`
 
-Constructor for [Regulator](#class-regulator)
+Constructor for [regulator](#class-regulator)
  
 #### Parameters
 * `TD` `TO` `T` `K` coefficients
 
-* `wt` desired value
+* `yt_1` desired value
 
-#### `public inline float `[`calculateUt`](#class-regulator)`(float yt,ofstream & file)`
+#### `public inline float `[`calculateUt`](#class-regulator)`(float yt)`
 
 This function calculates our linear model
 #### Parameters
-* `ut` Input Warm(calculated value)
-
-* `&file` It's a file for construct Excel table
+* `e` `em1` `em2` Input Warm(calculated value)
 
 #### Returns
-ut calculated value
+yt_1 calculated value
 
 Function code:
 ```cpp
-float calculateUt(float yt, ofstream &file) {
-float q0 = K * (1.0 + (TD / T0));
-float q1 = -K * (1.0 + (2.0 * TD / T0) - (T0 / T));
-float q2 = K * (TD / T0);
-file « "," « ek « endl;
-ek = wt - yt;
-ut += (q0 * ek) + (q1 * ek1) + (q2 * ek2);
-ek2 = ek1;
-ek1 = ek;
-return ut;
+ float warm(float e, float em1, float em2) {
+
+        float q0 = K * (1 + TD / T0);
+        float q1 = -K * (1 + 2 * TD / T0 - T0 / T);
+        float q2 = K * TD / T0;
+        
+        yt_1 += q0 * e + q1 * em1 + q2 * em2;
+   
+        return yt_1;
 }
 ```
 
