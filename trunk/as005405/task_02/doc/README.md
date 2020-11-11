@@ -267,11 +267,7 @@ sorry
 <h6>But i can show you the result of compiling my program</h6>
 
 ![alt text](https://github.com/as005405/MMIPU-2020/blob/master/trunk/as005405/task_02/doc/img/ToHRqZ10GN8.jpg)
-<h6> . </h6>
-<h6> . </h6>
-<h6> . </h6>
-![alt text](https://github.com/as005405/MMIPU-2020/blob/master/trunk/as005405/task_02/doc/img/ToHRqZ10GN8.jpg)
-<h6> . </h6>
-<h6> . </h6>
-<h6> . </h6>
+
+![alt text](https://github.com/as005405/MMIPU-2020/blob/master/trunk/as005405/task_02/doc/img/wx_8E5YdTFM.jpg)
+
 
