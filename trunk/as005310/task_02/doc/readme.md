@@ -1,4 +1,4 @@
-**Student: Budakova Anastasia AS-53**
+**Student: Dasha Zamulko AS-53**
 
 **Task 2**
 
