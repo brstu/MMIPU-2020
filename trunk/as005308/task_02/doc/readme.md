@@ -1,133 +1,199 @@
-**Student: Demidovich Anna AS-53**
+# Laboratory work #2
 
-**Task 2**
+### Student: Demidovich Anna
+##### Task 2. PID controller
 
-На C++ реализовать программу, моделирующую рассмотренный выше ПИД-регулятор. В качестве объекта управления использовать математическую модель, полученную в предыдущей работе. Использовать ООП, в программе должно быть не менее 3-х классов (+наследование). В отчете также привести графики для разных заданий температуры объекта, пояснить полученные результаты
+Write program (C++), that models PID - controller.
 
-**Code:**
+PID - controller:
 
+
+![Schema](img/schema.png)
+
+
+
+
+
+### main.cpp :
 ```c++
 #include<iostream>
 #include<math.h>
+#include "Regulator.h"
+#include "NonLinear.h"
+#include "Linear.h"
+#include "Model.h"
+
 using namespace std;
-
-class Model
-{
-public:
-    virtual float expression(double heat, double y) = 0;
-};
-
-class Linear : public Model
-        {
-private:
-    float a, b;
-public:
-    Linear(const float a, const float b)
-    {
-        this->a = a;
-        this->b = b;
-    }
-
-    float expression(double heat, double y) override
-    {
-        y = a * y + b * heat;
-        return y;
-    }
-};
-
-class Non_Linear : public Model
-        {
-private:
-    float a, b, c, d;
-    double y_0 = 0, heat_0 = 0;
-public:
-    Non_Linear(float a, float b, float c, float d)
-    {
-        this->a = a;
-        this->b = b;
-        this->c = c;
-        this->d = d;
-    }
-
-    float expression(double heat, double y) override
-    {
-        double y_1;
-        y_1 = a * y - b * pow(y_0, 2) + c * heat + d * sin(heat_0);
-        y_0 = y;
-        heat_0 = heat;
-        return y_1;
-    }
-};
-
-class Controller
-        {
-private:
-    double heat = 0;
-    double K, T, T_D, T_0;
-public:
-    Controller(const double K, const double T_0, const double T_D, const double T)
-    {
-        this->K = K;
-        this->T_0 = T_0;
-        this->T_D = T_D;
-        this->T = T;
-    }
-    double Heat(const double e, const double e_0 = 0, const double e_01 = 0)
-    {
-        double q_0, q_1, q_2;
-        q_0 = K * (1.0 + T_D / T_0);
-        q_1 = -K * (1 + 2.0 * T_D / T_0 - T_0 / T);
-        q_2 = K * T_D / T_0;
-        heat += q_0 * e + q_1 * e_0 + q_2 * e_01;
-        return heat;
-    }
-};
-
-void PID_System(const double w, Controller* ins, Model* m, double y)
-{
-    double e, e_0, e_01, u;
-    e = 0.0,
-    e_0 = 0.0,
-    e_01 = 0.0;
-    u = 0;
-    for (int k = 0; k < 50; k++)
-    {
-        cout << e << "\t\t" << y << "\t\t" << u << endl;
-        e = w - y;
-        u = ins->Heat(e, e_0, e_01);
-        y = m->expression(u, y);
-        e_01 = e_0;
-        e_0 = e;
-    }
-}
 
 int main()
 {
-    	cout << "Linear model:\nE:\t\tY:\t\tU:\n\n";
-	Linear* model = new Linear(0.1, 0.05);
-	Regulator* r = new Regulator(0.5, 5.0, 35.0, 10.0);
+	cout << "Linear model:\nE:\t\tY:\t\tU:\n\n";
+	Linear* model = new Linear(0.3, 0.1);
+	Regulator* r = new Regulator(0.1, 10, 50.0, 10.0);
 	r->PIDRegulator(25, r, model, 0);
 
 	cout << "\n\nNonlinear model:\nE:\t\tY:\t\tU:\n\n";
 
-	NonLinear* n_model = new NonLinear(0.1, 0.0001, 0.1, 0.0001);
-	Regulator* nlr = new Regulator(0.5, 5.0, 35.0, 7.0);
+	NonLinear* n_model = new NonLinear(0.3, 0.1, 0.1, 0.1);
+	Regulator* nlr = new Regulator(0.1, 10, 50.0, 10.0);
 	r->PIDRegulator(25, nlr, n_model, 0);
 
 	return 0;
 }
-
 ```
-**Result:**<br>
 
-**Linear model**<br>
+### Regulator.cpp :
+```c++
+#include "Regulator.h"
+#include <iostream>
 
-![Screenshot LineModel](img/Linear.png)
+Regulator::Regulator(const double K, const double T0, const double TD, const double T)
+{
+	this->K = K;
+	this->T0 = T0;
+	this->TD = TD;
+	this->T = T;
+}
+double Regulator::BeginWarm(const double e, const double e0, const double e00)
+{
+	double q0 = K * (1.0 + TD / T0);
+	double q1 = -K * (1 + 2.0 * TD / T0 - T0 / T);
+	double q2 = K * TD / T0;
+	beginWarm += q0 * e + q1 * e0 + q2 * e00;
+	return beginWarm;
+}
 
-**Non-linear model**<br>
+void Regulator::PIDRegulator(const double w, Regulator* reg, Model* m, double y)
+{
+	double e = 0.0, e0 = 0.0, e00 = 0.0;
+	double u = 0;
+	for (int k = 0; k < 50; k++)
+	{
+		std::cout << e << "\t|\t" << y << "\t|\t" << u << std::endl;
+		e = w - y;
+		u = reg->BeginWarm(e, e0, e00);
+		y = m->equation(u, y);
+		e00 = e0;
+		e0 = e;
+	}
+}
+```
 
-![Screenshot Non_LineModel](img/Non_Linear.png)
 
-**Вывод:** 
+###  Linear.cpp :
+```c++
+#include "Linear.h"
 
- В ходе лаболаторной работы я создал программу на языке C ++, имитирующую работу ПИД-регулятора.
+Linear::Linear(const double a, const double b)
+{
+	this->a = a;
+	this->b = b;
+}
+double Linear::equation(double beginWarm, double y) 
+{
+	y = a * y + b * beginWarm;
+	return y;
+}
+```
+
+
+###  NonLinear.cpp :
+```c++
+#include"NonLinear.h"
+#include<math.h>
+
+NonLinear::NonLinear(double a, double b, double c, double d)
+{
+	this->a = a;
+	this->b = b;
+	this->c = c;
+	this->d = d;
+}
+double NonLinear::equation(double beginWarm, double y) 
+{
+	double y1 = a * y - b * pow(y0, 2) + c * beginWarm + d * sin(beginWarm0);
+	y0 = y;
+	beginWarm0 = beginWarm;
+	return y1;
+}
+```
+
+
+###  Regulator.h :
+```c++
+#pragma once
+#include"Model.h"
+
+class Regulator
+{
+private:
+	double beginWarm = 0;
+	double K, T, TD, T0;
+
+public:
+	Regulator(const double K, const double T0, const double TD, const double T);
+	double BeginWarm(const double e, const double e0 = 0, const double e00 = 0);
+	void PIDRegulator(const double w, Regulator* reg, Model* m, double y);
+};
+```
+
+
+###  Linear.h :
+```c++
+#pragma once
+#include"Model.h"
+
+class Linear : public Model
+{
+private:
+	double a, b;
+
+public:
+	Linear(const double a, const double b);
+	double equation(double beginWarm, double y) override;
+};
+```
+
+
+### NonLinear.h :
+```c++
+#pragma once
+#include"Model.h"
+
+class NonLinear : public Model
+{
+private:
+	double a, b, c, d;
+	double y0 = 0, beginWarm0 = 0;
+
+public:
+	NonLinear(double a, double b, double c, double d);
+	double equation(double beginWarm, double y) override;
+};
+```
+
+
+### Model.h :
+```c++
+#pragma once
+
+class Model
+{
+public:
+	virtual double equation(double beginWarm, double y) = 0;
+};
+```
+
+##### Result:
+```w(t) = 4 K = 0.1 T0 = 10 TD = 50 T = 10```
+
+##### Linear
+ ```a = 0.3 b = 0.1```
+
+![LinearGraphic](img/LinearGraphic.png)
+
+
+##### Nonlinear
+```a = 0.3 b = 0.1 c = 0.1 d = 0.1```
+
+![NonLinearGraphic](img/NonlinearGraphic.png)
