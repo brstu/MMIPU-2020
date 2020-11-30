@@ -28,17 +28,15 @@ using namespace std;
 int main()
 {
 	cout << "Linear model:\nE:\t\tY:\t\tU:\n\n";
-	Linear* model = new Linear(0.3, 0.1);
-	Regulator* r = new Regulator(0.1, 10, 50.0, 10.0);
+	Linear* model = new Linear(0.1, 0.05);
+	Regulator* r = new Regulator(0.5, 5.0, 35.0, 10.0);
 	r->PIDRegulator(25, r, model, 0);
 
 	cout << "\n\nNonlinear model:\nE:\t\tY:\t\tU:\n\n";
 
-	NonLinear* n_model = new NonLinear(0.3, 0.1, 0.1, 0.1);
-	Regulator* nlr = new Regulator(0.1, 10, 50.0, 10.0);
+	NonLinear* n_model = new NonLinear(0.1, 0.0001, 0.1, 0.0001);
+	Regulator* nlr = new Regulator(0.5, 5.0, 35.0, 7.0);
 	r->PIDRegulator(25, nlr, n_model, 0);
-
-	return 0;
 }
 ```
 
@@ -185,15 +183,15 @@ public:
 ```
 
 ##### Result:
-```w(t) = 4 K = 0.1 T0 = 10 TD = 50 T = 10```
+```w(t) = 4 K = 0.5 T0 = 5 TD = 35 T = 10```
 
 ##### Linear
- ```a = 0.3 b = 0.1```
+ ```a = 0.1 b = 0.05```
 
 ![LinearGraphic](img/LinearGraphic.png)
 
 
 ##### Nonlinear
-```a = 0.3 b = 0.1 c = 0.1 d = 0.1```
+```a = 0.1 b = 0.0001 c = 0.1 d = 0.0001```
 
 ![NonLinearGraphic](img/NonlinearGraphic.png)
