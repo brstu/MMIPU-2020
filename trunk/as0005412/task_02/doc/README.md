@@ -1,14 +1,15 @@
 # Laboratory work #2
-
-### Student: Isachenka Anton
-##### Task 2. PID controller
-
+### Completed by the 3rd year student of
+### Faculty of Electronic-Information Systems
+### the group АС-54и, Safrin A. A.
+### Checked by Ivanyuk D. S. 
+##### Task:
 Write program (C++), that models PID - controller.
 
 PID - controller:
 
 <p align="center">
-    <img src="img/1.png">
+    <img src="img/photo.png">
 </p>
 
 
@@ -21,7 +22,7 @@ PID - controller:
 
 /**
 	\file in this file i solve task to implement PID - controller
-	\authors Anton Isachenka
+	\authors Alexander Safrin
 	\version 1.0
 	\date 21.10.2020
 
