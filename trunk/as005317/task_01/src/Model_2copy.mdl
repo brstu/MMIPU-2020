@@ -1,12 +1,12 @@
 Model {
-  Name			  "Model_3"
+  Name			  "Model_2"
   Version		  9.2
   SavedCharacterEncoding  "windows-1251"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.7"
+    ComputedModelVersion    "1.4"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -44,7 +44,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-7.0, -7.0, 1550.0, 838.0]
+      Location		      [762.0, 0.0, 781.0, 830.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -68,9 +68,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1875.0, 833.0]
-	ZoomFactor		[0.99999999999999978]
-	Offset			[-86.271258970498778, -95.36250017881332]
+	Extents			[913.0, 823.0]
+	ZoomFactor		[1.0]
+	Offset			[-48.998750000000015, -104.26666666666608]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -90,11 +90,11 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAAB5AP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAARgD///8AAAeAAAADhgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAARgD///8AAAO+AAADfAAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAACR/////wAAAAAAAAAA/////wEAAAEE/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAGV/////wAAAAAAAAAA/"
-      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAPG/////wAAAAAAAAAA/"
-      "////wEAAAP+/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
+      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAANO/////wAAAAAAAAAA/"
+      "////wEAAAOG/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
     }
   }
   HideAutomaticNames	  on
@@ -102,11 +102,11 @@ Model {
   Creator		  "Dravius"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "sasha"
+  LastModifiedBy	  "Dravius"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 22 11:34:11 2020"
-  RTWModifiedTimeStamp	  525267244
-  ModelVersionFormat	  "1.%<AutoIncrement:7>"
+  LastModifiedDate	  "Thu Oct 15 15:59:42 2020"
+  RTWModifiedTimeStamp	  524678354
+  ModelVersionFormat	  "1.%<AutoIncrement:4>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -163,12 +163,12 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "Model_3"
+    model_		    "Model_2"
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "Model_3"
+      Cell		      "Model_2"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1030,6 +1030,21 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+      AlgorithmType	      "Newton-Raphson"
+      Iterations	      "3"
+    }
+    Block {
       BlockType		      Memory
       InitialCondition	      "0"
       InheritSampleTime	      off
@@ -1081,23 +1096,10 @@ Model {
       SaturateOnIntegerOverflow	on
       SampleTime	      "-1"
     }
-    Block {
-      BlockType		      Trigonometry
-      Operator		      "sin"
-      ApproximationMethod     "None"
-      NumberOfIterations      "11"
-      OutputSignalType	      "auto"
-      SampleTime	      "-1"
-    }
-    Block {
-      BlockType		      UnaryMinus
-      SampleTime	      "-1"
-      SaturateOnIntegerOverflow	off
-    }
   }
   System {
-    Name		    "Model_3"
-    Location		    [-7, -7, 1543, 831]
+    Name		    "Model_2"
+    Location		    [762, 0, 1543, 830]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1114,20 +1116,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "28"
-    Block {
-      BlockType		      Product
-      Name		      "2i"
-      SID		      "24"
-      Ports		      [2, 1]
-      Position		      [122, 325, 153, 355]
-      ZOrder		      23
-      BlockRotation	      270
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-    }
+    SIDHighWatermark	    "19"
     Block {
       BlockType		      Abs
       Name		      "Abs"
@@ -1140,32 +1129,45 @@ Model {
       BlockType		      Constant
       Name		      "Constant"
       SID		      "1"
-      Position		      [-75, 155, -45, 185]
+      Position		      [-5, 155, 25, 185]
       ZOrder		      1
-      Value		      "1.047"
+      Value		      "1.234"
     }
     Block {
       BlockType		      Constant
       Name		      "Constant1"
       SID		      "10"
-      Position		      [25, 375, 55, 405]
+      Position		      [80, 295, 110, 325]
       ZOrder		      10
     }
     Block {
-      BlockType		      Constant
-      Name		      "Constant2"
-      SID		      "28"
-      Position		      [210, 275, 240, 305]
-      ZOrder		      27
-      BlockMirror	      on
-      Value		      "2"
+      BlockType		      Display
+      Name		      "Display1"
+      SID		      "3"
+      Ports		      [1]
+      Position		      [400, 115, 490, 145]
+      ZOrder		      3
+      HideAutomaticName	      off
+      Format		      "long"
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display2"
+      SID		      "4"
+      Ports		      [1]
+      Position		      [245, 295, 335, 325]
+      ZOrder		      4
+      HideAutomaticName	      off
+      Format		      "long"
+      Decimation	      "1"
     }
     Block {
       BlockType		      Display
       Name		      "Display3"
       SID		      "5"
       Ports		      [1]
-      Position		      [480, 505, 610, 535]
+      Position		      [440, 415, 530, 445]
       ZOrder		      5
       Format		      "long"
       Decimation	      "1"
@@ -1184,10 +1186,18 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
+      BlockType		      Math
+      Name		      "Math\nFunction"
+      SID		      "16"
+      Ports		      [1, 1]
+      Position		      [290, 415, 320, 445]
+      ZOrder		      16
+    }
+    Block {
       BlockType		      Memory
       Name		      "Memory"
       SID		      "7"
-      Position		      [120, -10, 150, 20]
+      Position		      [120, 55, 150, 85]
       ZOrder		      7
       BlockMirror	      on
       NamePlacement	      "alternate"
@@ -1197,7 +1207,7 @@ Model {
       BlockType		      Memory
       Name		      "Memory1"
       SID		      "8"
-      Position		      [275, -80, 305, -50]
+      Position		      [295, -5, 325, 25]
       ZOrder		      8
       BlockMirror	      on
       InitialCondition	      "1"
@@ -1206,34 +1216,8 @@ Model {
       BlockType		      Memory
       Name		      "Memory2"
       SID		      "9"
-      Position		      [25, 430, 55, 460]
+      Position		      [110, 350, 140, 380]
       ZOrder		      9
-      InitialCondition	      "-1"
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product"
-      SID		      "22"
-      Ports		      [2, 1]
-      Position		      [35, 152, 65, 183]
-      ZOrder		      21
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Product2"
-      SID		      "25"
-      Ports		      [2, 1]
-      Position		      [72, 220, 103, 250]
-      ZOrder		      24
-      BlockRotation	      270
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      RelationalOperator
@@ -1252,7 +1236,7 @@ Model {
       Name		      "Rezultat"
       SID		      "2"
       Ports		      [1]
-      Position		      [485, -65, 620, -35]
+      Position		      [445, 15, 535, 45]
       ZOrder		      2
       HideAutomaticName	      off
       Format		      "long"
@@ -1271,7 +1255,7 @@ Model {
       Name		      "Sum"
       SID		      "11"
       Ports		      [2, 1]
-      Position		      [85, 405, 105, 425]
+      Position		      [160, 300, 180, 320]
       ZOrder		      11
       ShowName		      off
       IconShape		      "round"
@@ -1282,77 +1266,15 @@ Model {
     Block {
       BlockType		      Sum
       Name		      "Sum1"
-      SID		      "21"
+      SID		      "14"
       Ports		      [2, 1]
-      Position		      [295, 10, 315, 30]
-      ZOrder		      20
+      Position		      [305, 75, 325, 95]
+      ZOrder		      14
       ShowName		      off
       IconShape		      "round"
-      Inputs		      "|++"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum2"
-      SID		      "26"
-      Ports		      [2, 1]
-      Position		      [70, 280, 90, 300]
-      ZOrder		      25
-      BlockRotation	      270
-      NamePlacement	      "alternate"
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|++"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum3"
-      SID		      "27"
-      Ports		      [2, 1]
-      Position		      [130, 280, 150, 300]
-      ZOrder		      26
-      BlockRotation	      270
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|++"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Trigonometry
-      Name		      "Trigonometric\nFunction"
-      SID		      "20"
-      Ports		      [1, 1]
-      Position		      [285, 505, 315, 535]
-      ZOrder		      19
-      Operator		      "cos"
-    }
-    Block {
-      BlockType		      UnaryMinus
-      Name		      "Unary Minus"
-      SID		      "23"
-      Position		      [60, 45, 90, 75]
-      ZOrder		      22
-      BlockRotation	      270
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-    }
-    Block {
-      BlockType		      Display
-      Name		      "a(i)"
-      SID		      "3"
-      Ports		      [1]
-      Position		      [485, 117, 620, 143]
-      ZOrder		      3
-      HideAutomaticName	      off
-      Format		      "long"
-      Decimation	      "1"
     }
     Block {
       BlockType		      Constant
@@ -1361,67 +1283,38 @@ Model {
       Position		      [370, 260, 430, 295]
       ZOrder		      15
       BlockRotation	      270
-      Value		      "0.000001"
-    }
-    Block {
-      BlockType		      Display
-      Name		      "i"
-      SID		      "4"
-      Ports		      [1]
-      Position		      [170, 400, 260, 430]
-      ZOrder		      4
-      HideAutomaticName	      off
-      Format		      "long"
-      Decimation	      "1"
+      Value		      "0.00001"
     }
     Line {
-      ZOrder		      60
+      ZOrder		      1
       SrcBlock		      "Constant"
       SrcPort		      1
-      Points		      [28, 0]
+      Points		      [23, 0]
       Branch {
-	ZOrder			69
-	Points			[0, 5]
-	Branch {
-	  ZOrder		  68
-	  DstBlock		  "Product"
-	  DstPort		  2
-	}
-	Branch {
-	  ZOrder		  67
-	  Points		  [0, 345]
-	  DstBlock		  "Trigonometric\nFunction"
-	  DstPort		  1
-	}
+	ZOrder			3
+	Points			[0, 260]
+	DstBlock		"Math\nFunction"
+	DstPort			1
       }
       Branch {
-	ZOrder			66
-	Points			[0, -10]
-	DstBlock		"Product"
-	DstPort			1
+	ZOrder			2
+	DstBlock		"Divide"
+	DstPort			2
       }
     }
     Line {
       ZOrder		      4
       SrcBlock		      "Constant1"
       SrcPort		      1
-      Points		      [20, 0]
-      Branch {
-	ZOrder			92
-	DstBlock		"Sum2"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			91
-	DstBlock		"Sum"
-	DstPort			1
-      }
+      Points		      [20, 0; 0, -25]
+      DstBlock		      "Sum"
+      DstPort		      1
     }
     Line {
       ZOrder		      5
       SrcBlock		      "Memory2"
       SrcPort		      1
-      Points		      [35, 0]
+      Points		      [25, 0]
       DstBlock		      "Sum"
       DstPort		      2
     }
@@ -1429,30 +1322,31 @@ Model {
       ZOrder		      6
       SrcBlock		      "Sum"
       SrcPort		      1
-      Points		      [20, 0]
-      Branch {
-	ZOrder			84
-	DstBlock		"i"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			83
-	DstBlock		"2i"
-	DstPort			1
-      }
+      Points		      [16, 0]
       Branch {
 	ZOrder			10
-	Points			[0, 71; -128, 0; 0, -41]
+	Points			[0, 84; -134, 0; 0, -29]
 	DstBlock		"Memory2"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			9
+	Points			[0, -50; -134, 0; 0, -65]
+	DstBlock		"Divide"
+	DstPort			3
+      }
+      Branch {
+	ZOrder			7
+	DstBlock		"Display2"
 	DstPort			1
       }
     }
     Line {
-      ZOrder		      75
+      ZOrder		      11
       SrcBlock		      "Memory"
       SrcPort		      1
-      Points		      [-40, 0]
-      DstBlock		      "Unary Minus"
+      Points		      [-10, 0]
+      DstBlock		      "Divide"
       DstPort		      1
     }
     Line {
@@ -1465,22 +1359,23 @@ Model {
 	Points			[0, -41]
 	Branch {
 	  ZOrder		  17
-	  Points		  [141, 0]
+	  Points		  [147, 0]
 	  Branch {
-	    ZOrder		    49
+	    ZOrder		    24
 	    Points		    [0, 1]
-	    DstBlock		    "a(i)"
+	    DstBlock		    "Display1"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    48
+	    ZOrder		    23
+	    Points		    [4, 0]
 	    DstBlock		    "Sum1"
 	    DstPort		    2
 	  }
 	}
 	Branch {
 	  ZOrder		  16
-	  Points		  [0, -124]
+	  Points		  [0, -59]
 	  DstBlock		  "Memory"
 	  DstPort		  1
 	}
@@ -1493,27 +1388,27 @@ Model {
       }
     }
     Line {
-      ZOrder		      51
+      ZOrder		      18
       SrcBlock		      "Sum1"
       SrcPort		      1
-      Points		      [25, 0; 0, -70]
+      Points		      [15, 0; 0, -55]
       Branch {
-	ZOrder			74
+	ZOrder			21
 	DstBlock		"Rezultat"
 	DstPort			1
       }
       Branch {
 	ZOrder			20
-	Points			[0, -15]
+	Points			[0, -20]
 	DstBlock		"Memory1"
 	DstPort			1
       }
     }
     Line {
-      ZOrder		      50
+      ZOrder		      19
       SrcBlock		      "Memory1"
       SrcPort		      1
-      Points		      [-9, 0; 0, 85]
+      Points		      [-32, 0; 0, 50]
       DstBlock		      "Sum1"
       DstPort		      1
     }
@@ -1540,82 +1435,10 @@ Model {
       DstPort		      2
     }
     Line {
-      ZOrder		      53
-      SrcBlock		      "Trigonometric\nFunction"
+      ZOrder		      28
+      SrcBlock		      "Math\nFunction"
       SrcPort		      1
       DstBlock		      "Display3"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      73
-      SrcBlock		      "Product"
-      SrcPort		      1
-      DstBlock		      "Divide"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      76
-      SrcBlock		      "Unary Minus"
-      SrcPort		      1
-      Points		      [0, 65]
-      DstBlock		      "Divide"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      85
-      SrcBlock		      "Product2"
-      SrcPort		      1
-      Points		      [0, -20]
-      DstBlock		      "Divide"
-      DstPort		      3
-    }
-    Line {
-      ZOrder		      87
-      SrcBlock		      "Constant2"
-      SrcPort		      1
-      Points		      [-18, 0]
-      Branch {
-	ZOrder			97
-	Points			[0, 80]
-	DstBlock		"2i"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			96
-	DstBlock		"Sum3"
-	DstPort			2
-      }
-    }
-    Line {
-      ZOrder		      88
-      SrcBlock		      "2i"
-      SrcPort		      1
-      Points		      [0, -5]
-      Branch {
-	ZOrder			90
-	Points			[0, -2; -18, 0; 0, -23]
-	DstBlock		"Sum2"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			89
-	DstBlock		"Sum3"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      94
-      SrcBlock		      "Sum3"
-      SrcPort		      1
-      Points		      [-45, 0]
-      DstBlock		      "Product2"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      95
-      SrcBlock		      "Sum2"
-      SrcPort		      1
-      DstBlock		      "Product2"
       DstPort		      1
     }
   }
