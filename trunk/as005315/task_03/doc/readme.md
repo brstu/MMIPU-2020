@@ -9,13 +9,13 @@
 - подключить LTI-viewer к вашей системе.
 
 <p align="center">
-    <img src="images/scheme.png" >
+    <img src="images/scheme.PNG" >
 </p>
 
 - на осциллографе (Scope) получить переходную функцию системы:
 
 <p align="center">
-    <img src="images/scope.PNG" >
+    <img src="images/scope.png" >
 </p>
 
 - получите основные характеристики системы:
