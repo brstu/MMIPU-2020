@@ -15,30 +15,30 @@
 - на осциллографе (Scope) получить переходную функцию системы:
 
 <p align="center">
-    <img src="images/scope.png" >
+    <img src="images/scope.PNG" >
 </p>
 
 - получите основные характеристики системы:
 1) передаточную функцию
 <p align="center">
-    <img src="images/step.png" >
+    <img src="images/step.PNG" >
 </p>
 
 Вывод: Система устройчива, т.к. функция стремится к 0.
 
 2) импульсную характеристику
 <p align="center">
-    <img src="images/impulse.png" >
+    <img src="images/impulse.PNG" >
 </p>
 
 3) амплитудно-частотную и фазо-частотные характеристики
 <p align="center">
-    <img src="images/bode.png" >
+    <img src="images/bode.PNG" >
 </p>
 
 4) диаграмму Найквиста
 <p align="center">
-    <img src="images/nekv.png" >
+    <img src="images/nekv.PNG" >
 </p>
 
 Вывод: Система устойчива, т.к. точка (0;-1) не принадлежит области.
@@ -46,7 +46,7 @@
 5) значение нулей и полюсов
 
 <p align="center">
-    <img src="images/zero.png" >
+    <img src="images/zero.PNG" >
 </p>
 
 Вывод: Система устройчива – полюса находятся в отрицательной области (2,3 четверти).
