@@ -1,4 +1,4 @@
-# Laboratory work #2
+# Laboratory work №2
 
 ### Student: Altsivanovich Nikolay  
 #### Task 2. PID controller
