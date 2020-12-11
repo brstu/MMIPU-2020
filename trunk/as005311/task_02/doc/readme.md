@@ -19,47 +19,40 @@ explain the results obtained (the report can be obtained using Doxygen in chm fo
 
 using namespace std;
 
-class model
-{
+class model {
 public:
     virtual float equation(float yt, float ut) = 0;
 };
 
-class linear : public model
-{
+class linear : public model {
 private:
     float a, b, yt1;
 public:
-    linear(float a, float b)
-    {
+    linear(float a, float b) {
         this->a = a;
         this->b = b;
     }
 
-    float equation(float yt, float ut)
-    {
+    float equation(float yt, float ut) {
         yt1 = a * yt + b * ut;
         return yt1;
     }
 };
 
-class nonlinear : public model
-{
+class nonlinear : public model {
 private:
     float a, c, d, b;
     float yt0 = 0, yt1;
     float ut0 = 0;
 public:
-    nonlinear(float a, float b, float c, float d)
-    {
+    nonlinear(float a, float b, float c, float d) {
         this->a = a;
         this->b = b;
         this->c = c;
         this->d = d;
     }
 
-    float equation(float yt, float ut)
-    {
+    float equation(float yt, float ut) {
         yt1 = a * yt - b * pow(yt0, 2) + c * ut + d * sin(ut0);
         ut0 = ut;
         yt0 = yt;
@@ -68,8 +61,7 @@ public:
     }
 };
 
-class regulator
-{
+class regulator {
 private:
     float T, T0, TD, K, yt1 = 0;
 public:
@@ -115,8 +107,7 @@ void PIDregulator(float w, float y0, regulator* reg, model* md) {
     }
 }
 
-int main()
-{
+int main() {
     cout << "Linear Model:" << endl;
     linear* l = new linear(0.3, 0.7);
     regulator* rl = new regulator(20, 20, 100, 0.05);
