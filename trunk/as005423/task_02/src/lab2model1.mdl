@@ -1,12 +1,12 @@
 Model {
-  Name			  "Model_2"
+  Name			  "lab2model1"
   Version		  9.2
   SavedCharacterEncoding  "windows-1251"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.4"
+    ComputedModelVersion    "1.3"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -25,6 +25,17 @@ Model {
   NotesPlugin		  "on"
   LogicAnalyzerPlugin	  "on"
   SLCCPlugin		  "on"
+  slprops.hdlmdlprops {
+    $PropName		    "HDLParams"
+    $ObjectID		    1
+    Array {
+      Type		      "Cell"
+      Dimension		      2
+      Cell		      "HDLSubsystem"
+      Cell		      "$bdroot"
+      PropName		      "mdlProps"
+    }
+  }
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
   DisableAllScopes	  off
@@ -37,17 +48,17 @@ Model {
   LastSavedArchitecture	  "win64"
   Object {
     $PropName		    "BdWindowsInfo"
-    $ObjectID		    1
+    $ObjectID		    2
     $ClassName		    "Simulink.BDWindowsInfo"
     Object {
       $PropName		      "WindowsInfo"
-      $ObjectID		      2
+      $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
       Location		      [762.0, 0.0, 781.0, 830.0]
       Object {
 	$PropName		"ModelBrowserInfo"
-	$ObjectID		3
+	$ObjectID		4
 	$ClassName		"Simulink.ModelBrowserInfo"
 	Visible			[0]
 	DockPosition		"Left"
@@ -57,24 +68,24 @@ Model {
       }
       Object {
 	$PropName		"ExplorerBarInfo"
-	$ObjectID		4
+	$ObjectID		5
 	$ClassName		"Simulink.ExplorerBarInfo"
 	Visible			[1]
       }
       Object {
 	$PropName		"EditorsInfo"
-	$ObjectID		5
+	$ObjectID		6
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[913.0, 823.0]
 	ZoomFactor		[1.0]
-	Offset			[-48.998750000000015, -104.26666666666608]
+	Offset			[0.0, 0.0]
       }
       Object {
 	$PropName		"DockComponentsInfo"
-	$ObjectID		6
+	$ObjectID		7
 	$ClassName		"Simulink.DockComponentInfo"
 	Type			"GLUE2:PropertyInspector"
 	ID			"Property Inspector"
@@ -98,15 +109,15 @@ Model {
     }
   }
   HideAutomaticNames	  on
-  Created		  "Tue Oct 13 12:02:49 2020"
+  Created		  "Thu Oct 22 11:49:01 2020"
   Creator		  "Dravius"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Dravius"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 15 15:59:42 2020"
-  RTWModifiedTimeStamp	  524678354
-  ModelVersionFormat	  "1.%<AutoIncrement:4>"
+  LastModifiedDate	  "Thu Nov 12 22:25:49 2020"
+  RTWModifiedTimeStamp	  527120685
+  ModelVersionFormat	  "1.%<AutoIncrement:3>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -161,14 +172,14 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    7
+    $ObjectID		    8
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "Model_2"
-    overrideMode_	    [0.0]
+    model_		    "lab2model1"
+    overrideMode_	    [0U]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "Model_2"
+      Cell		      "lab2model1"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -206,7 +217,7 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      8
+      $ObjectID		      9
       Version		      "1.18.1"
       DisabledProps	      []
       Description	      ""
@@ -214,12 +225,12 @@ Model {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  9
+	  $ObjectID		  10
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
 	  StartTime		  "0.0"
-	  StopTime		  "10.0"
+	  StopTime		  "20"
 	  AbsTol		  "auto"
 	  AutoScaleAbsTol	  on
 	  FixedStep		  "auto"
@@ -255,7 +266,7 @@ Model {
 	  MinimalZcImpactIntegration off
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  10
+	  $ObjectID		  11
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -296,7 +307,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  11
+	  $ObjectID		  12
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -363,7 +374,7 @@ Model {
 	  LabelGuidedReuse	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  12
+	  $ObjectID		  13
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -482,7 +493,7 @@ Model {
 	  UnderSpecifiedDimensionMsg "none"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  13
+	  $ObjectID		  14
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -530,7 +541,7 @@ Model {
 	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  14
+	  $ObjectID		  15
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -549,7 +560,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  15
+	  $ObjectID		  16
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -582,7 +593,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  16
+	  $ObjectID		  17
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -669,7 +680,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      17
+	      $ObjectID		      18
 	      Version		      "1.18.1"
 	      Array {
 		Type			"Cell"
@@ -757,7 +768,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      18
+	      $ObjectID		      19
 	      Version		      "1.18.1"
 	      Array {
 		Type			"Cell"
@@ -863,7 +874,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  19
+	  $ObjectID		  20
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -903,7 +914,7 @@ Model {
 	  CovMcdcMode		  "Masking"
 	}
 	hdlcoderui.hdlcc {
-	  $ObjectID		  20
+	  $ObjectID		  21
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  "HDL Coder custom configuration component"
@@ -921,17 +932,17 @@ Model {
       Name		      "Configuration"
       ExtraOptions	      ""
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition    [ 145, 177, 1135, 847 ]
+      ConfigPrmDlgPosition    [ 145, 124, 1135, 794 ]
     }
     PropName		    "ConfigurationSets"
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    8
+    $ObjectID		    9
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    21
+    $ObjectID		    22
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -998,17 +1009,6 @@ Model {
   }
   BlockParameterDefaults {
     Block {
-      BlockType		      Abs
-      ZeroCross		      on
-      SampleTime	      "-1"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as input"
-      LockScale		      off
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	on
-    }
-    Block {
       BlockType		      Constant
       Value		      "1"
       VectorParams1D	      on
@@ -1022,63 +1022,8 @@ Model {
       PreserveConstantTs      off
     }
     Block {
-      BlockType		      Display
-      Format		      "short"
-      Decimation	      "10"
-      Floating		      off
-      Lockdown		      off
-      SampleTime	      "-1"
-    }
-    Block {
-      BlockType		      Math
-      Operator		      "exp"
-      OutputSignalType	      "auto"
-      SampleTime	      "-1"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as first input"
-      LockScale		      off
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	on
-      IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
-      AlgorithmType	      "Newton-Raphson"
-      Iterations	      "3"
-    }
-    Block {
-      BlockType		      Memory
-      InitialCondition	      "0"
-      InheritSampleTime	      off
-      LinearizeMemory	      off
-      LinearizeAsDelay	      off
-      StateMustResolveToSignalObject off
-      RTWStateStorageClass    "Auto"
-    }
-    Block {
-      BlockType		      Product
-      Inputs		      "2"
-      Multiplication	      "Element-wise(.*)"
-      CollapseMode	      "All dimensions"
-      CollapseDim	      "1"
-      InputSameDT	      on
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: Same as first input"
-      LockScale		      off
-      RndMeth		      "Zero"
-      SaturateOnIntegerOverflow	on
-      SampleTime	      "-1"
-    }
-    Block {
-      BlockType		      RelationalOperator
-      Operator		      ">="
-      InputSameDT	      on
-      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
-      ZeroCross		      on
-      SampleTime	      "-1"
-      RndMeth		      "Nearest"
-    }
-    Block {
-      BlockType		      Stop
+      BlockType		      Scope
+      DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
     }
     Block {
       BlockType		      Sum
@@ -1096,9 +1041,25 @@ Model {
       SaturateOnIntegerOverflow	on
       SampleTime	      "-1"
     }
+    Block {
+      BlockType		      TransferFcn
+      Numerator		      "[1]"
+      Denominator	      "[1 2 1]"
+      AbsoluteTolerance	      "auto"
+      ContinuousStateAttributes	"''"
+      Realization	      "auto"
+    }
+    Block {
+      BlockType		      ZeroPole
+      Zeros		      "[1]"
+      Poles		      "[0 1]"
+      Gain		      "[1]"
+      AbsoluteTolerance	      "auto"
+      ContinuousStateAttributes	"''"
+    }
   }
   System {
-    Name		    "Model_2"
+    Name		    "lab2model1"
     Location		    [762, 0, 1543, 830]
     Open		    on
     PortBlocksUseCompactNotation off
@@ -1116,149 +1077,54 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "19"
-    Block {
-      BlockType		      Abs
-      Name		      "Abs"
-      SID		      "13"
-      Position		      [320, 180, 350, 210]
-      ZOrder		      13
-      SaturateOnIntegerOverflow	off
-    }
+    SIDHighWatermark	    "6"
     Block {
       BlockType		      Constant
       Name		      "Constant"
       SID		      "1"
-      Position		      [-5, 155, 25, 185]
+      Position		      [60, 120, 90, 150]
       ZOrder		      1
-      Value		      "1.234"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant1"
-      SID		      "10"
-      Position		      [80, 295, 110, 325]
-      ZOrder		      10
-    }
-    Block {
-      BlockType		      Display
-      Name		      "Display1"
-      SID		      "3"
-      Ports		      [1]
-      Position		      [400, 115, 490, 145]
-      ZOrder		      3
       HideAutomaticName	      off
-      Format		      "long"
-      Decimation	      "1"
     }
     Block {
-      BlockType		      Display
-      Name		      "Display2"
-      SID		      "4"
-      Ports		      [1]
-      Position		      [245, 295, 335, 325]
-      ZOrder		      4
-      HideAutomaticName	      off
-      Format		      "long"
-      Decimation	      "1"
-    }
-    Block {
-      BlockType		      Display
-      Name		      "Display3"
-      SID		      "5"
-      Ports		      [1]
-      Position		      [440, 415, 530, 445]
-      ZOrder		      5
-      Format		      "long"
-      Decimation	      "1"
-    }
-    Block {
-      BlockType		      Product
-      Name		      "Divide"
-      SID		      "18"
-      Ports		      [3, 1]
-      Position		      [120, 134, 150, 206]
-      ZOrder		      18
-      Inputs		      "**/"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
-      BlockType		      Math
-      Name		      "Math\nFunction"
-      SID		      "16"
-      Ports		      [1, 1]
-      Position		      [290, 415, 320, 445]
-      ZOrder		      16
-    }
-    Block {
-      BlockType		      Memory
-      Name		      "Memory"
-      SID		      "7"
-      Position		      [120, 55, 150, 85]
-      ZOrder		      7
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      InitialCondition	      "1"
-    }
-    Block {
-      BlockType		      Memory
-      Name		      "Memory1"
-      SID		      "8"
-      Position		      [295, -5, 325, 25]
-      ZOrder		      8
-      BlockMirror	      on
-      InitialCondition	      "1"
-    }
-    Block {
-      BlockType		      Memory
-      Name		      "Memory2"
-      SID		      "9"
-      Position		      [110, 350, 140, 380]
-      ZOrder		      9
-    }
-    Block {
-      BlockType		      RelationalOperator
-      Name		      "Relational\nOperator"
-      SID		      "17"
-      Ports		      [2, 1]
-      Position		      [430, 187, 460, 218]
-      ZOrder		      17
-      Operator		      "<="
-      InputSameDT	      off
-      OutDataTypeStr	      "boolean"
-      RndMeth		      "Simplest"
-    }
-    Block {
-      BlockType		      Display
-      Name		      "Rezultat"
+      BlockType		      Scope
+      Name		      "Scope"
       SID		      "2"
       Ports		      [1]
-      Position		      [445, 15, 535, 45]
+      Position		      [645, 121, 700, 169]
       ZOrder		      2
       HideAutomaticName	      off
-      Format		      "long"
-      Decimation	      "1"
-    }
-    Block {
-      BlockType		      Stop
-      Name		      "Stop Simulation"
-      SID		      "6"
-      Position		      [535, 187, 570, 223]
-      ZOrder		      6
-      BackgroundColor	      "red"
+      FontName		      "Arial"
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('Mi"
+      "nYLimReal','-0.17554','MaxYLimReal','0.36473','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.36473','Leg"
+      "endVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.68627"
+      "4509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529"
+      "411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647"
+      "058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLa"
+      "bel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Zero-Pole'}},'ShowCo"
+      "ntent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-0.17554','MaxYLimReal','0.36473','Y"
+      "LabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.36473','LegendVisibility','Off','XGrid',true,'YGrid',true,'"
+      "PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],"
+      "'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667"
+      ";0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647"
+      " 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',"
+      "false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2018b')),'Version','"
+      "2018b','Position',[658.6 197 560 420],'VisibleAtModelOpen','on')"
+      NumInputPorts	      "1"
+      Floating		      off
     }
     Block {
       BlockType		      Sum
       Name		      "Sum"
-      SID		      "11"
+      SID		      "3"
       Ports		      [2, 1]
-      Position		      [160, 300, 180, 320]
-      ZOrder		      11
+      Position		      [165, 125, 185, 145]
+      ZOrder		      3
       ShowName		      off
       IconShape		      "round"
+      Inputs		      "|+-"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -1266,180 +1132,91 @@ Model {
     Block {
       BlockType		      Sum
       Name		      "Sum1"
-      SID		      "14"
+      SID		      "4"
       Ports		      [2, 1]
-      Position		      [305, 75, 325, 95]
-      ZOrder		      14
+      Position		      [360, 125, 380, 145]
+      ZOrder		      4
       ShowName		      off
       IconShape		      "round"
+      Inputs		      "|+-"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Constant
-      Name		      "eps"
-      SID		      "15"
-      Position		      [370, 260, 430, 295]
-      ZOrder		      15
-      BlockRotation	      270
-      Value		      "0.00001"
+      BlockType		      TransferFcn
+      Name		      "Transfer Fcn"
+      SID		      "5"
+      Position		      [230, 107, 330, 163]
+      ZOrder		      5
+      HideAutomaticName	      off
+      Numerator		      "[1 0]"
+      Denominator	      "[1 0.16 1]"
+    }
+    Block {
+      BlockType		      ZeroPole
+      Name		      "Zero-Pole"
+      SID		      "6"
+      Position		      [400, 108, 500, 162]
+      ZOrder		      6
+      HideAutomaticName	      off
+      Zeros		      "[0]"
+      Poles		      "[-0.03 -1]"
     }
     Line {
       ZOrder		      1
       SrcBlock		      "Constant"
       SrcPort		      1
-      Points		      [23, 0]
-      Branch {
-	ZOrder			3
-	Points			[0, 260]
-	DstBlock		"Math\nFunction"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			2
-	DstBlock		"Divide"
-	DstPort			2
-      }
-    }
-    Line {
-      ZOrder		      4
-      SrcBlock		      "Constant1"
-      SrcPort		      1
-      Points		      [20, 0; 0, -25]
       DstBlock		      "Sum"
       DstPort		      1
     }
     Line {
-      ZOrder		      5
-      SrcBlock		      "Memory2"
-      SrcPort		      1
-      Points		      [25, 0]
-      DstBlock		      "Sum"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      6
+      ZOrder		      2
       SrcBlock		      "Sum"
       SrcPort		      1
-      Points		      [16, 0]
-      Branch {
-	ZOrder			10
-	Points			[0, 84; -134, 0; 0, -29]
-	DstBlock		"Memory2"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			9
-	Points			[0, -50; -134, 0; 0, -65]
-	DstBlock		"Divide"
-	DstPort			3
-      }
-      Branch {
-	ZOrder			7
-	DstBlock		"Display2"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      11
-      SrcBlock		      "Memory"
-      SrcPort		      1
-      Points		      [-10, 0]
-      DstBlock		      "Divide"
+      DstBlock		      "Transfer Fcn"
       DstPort		      1
     }
     Line {
-      ZOrder		      12
-      SrcBlock		      "Divide"
+      ZOrder		      3
+      SrcBlock		      "Transfer Fcn"
       SrcPort		      1
-      Points		      [9, 0]
-      Branch {
-	ZOrder			31
-	Points			[0, -41]
-	Branch {
-	  ZOrder		  17
-	  Points		  [147, 0]
-	  Branch {
-	    ZOrder		    24
-	    Points		    [0, 1]
-	    DstBlock		    "Display1"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    23
-	    Points		    [4, 0]
-	    DstBlock		    "Sum1"
-	    DstPort		    2
-	  }
-	}
-	Branch {
-	  ZOrder		  16
-	  Points		  [0, -59]
-	  DstBlock		  "Memory"
-	  DstPort		  1
-	}
-      }
-      Branch {
-	ZOrder			30
-	Points			[0, 25]
-	DstBlock		"Abs"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      18
-      SrcBlock		      "Sum1"
-      SrcPort		      1
-      Points		      [15, 0; 0, -55]
-      Branch {
-	ZOrder			21
-	DstBlock		"Rezultat"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			20
-	Points			[0, -20]
-	DstBlock		"Memory1"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      19
-      SrcBlock		      "Memory1"
-      SrcPort		      1
-      Points		      [-32, 0; 0, 50]
       DstBlock		      "Sum1"
       DstPort		      1
     }
     Line {
-      ZOrder		      25
-      SrcBlock		      "Abs"
+      ZOrder		      4
+      SrcBlock		      "Sum1"
       SrcPort		      1
-      DstBlock		      "Relational\nOperator"
+      DstBlock		      "Zero-Pole"
       DstPort		      1
     }
     Line {
-      ZOrder		      26
-      SrcBlock		      "Relational\nOperator"
+      ZOrder		      5
+      SrcBlock		      "Zero-Pole"
       SrcPort		      1
-      DstBlock		      "Stop Simulation"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      27
-      SrcBlock		      "eps"
-      SrcPort		      1
-      Points		      [0, -45]
-      DstBlock		      "Relational\nOperator"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      28
-      SrcBlock		      "Math\nFunction"
-      SrcPort		      1
-      DstBlock		      "Display3"
-      DstPort		      1
+      Points		      [6, 0]
+      Branch {
+	ZOrder			17
+	Points			[0, 51; -141, 0]
+	DstBlock		"Sum1"
+	DstPort			2
+      }
+      Branch {
+	ZOrder			16
+	Points			[17, 0; 0, 10]
+	Branch {
+	  ZOrder		  11
+	  Points		  [0, 53; -353, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Branch {
+	  ZOrder		  8
+	  DstBlock		  "Scope"
+	  DstPort		  1
+	}
+      }
     }
   }
 }
