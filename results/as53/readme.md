@@ -65,7 +65,7 @@
 | 24. Прудников Владимир   | :star:                   | :heavy_exclamation_mark: :star:          | :star:                      |                        |
 | 25. Пстыга Елена         | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 26. Раткевич Алексей     | :heavy_exclamation_mark: | :x:                                      | :x:                         |                        |
-| 27. Степанюк Роман       | :x:                      | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
+| 27. Степанюк Роман       | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 28. Степанюк Анатолий    | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 29. Храповицкий Олег     | :heavy_exclamation_mark: | :x:                                      | :x:                         |                        |
 | 30. Шарманов Иван        | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:    |                        |
