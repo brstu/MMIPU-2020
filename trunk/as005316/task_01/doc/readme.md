@@ -10,9 +10,6 @@
 
 
 Model 1:
-
-
-
 <p align="center">
     <img src="images/model1.png" >
 
@@ -21,8 +18,6 @@ Model 1:
 
 
 Model 2:
-
-
 
 <p align="center">
    <img src="images/model2.png" >
@@ -68,7 +63,6 @@ Display2 отображает наше количество итераций - i
 
 
 Model 3:
-
 
 
 <p align="center">
