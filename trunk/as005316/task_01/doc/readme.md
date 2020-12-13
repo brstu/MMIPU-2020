@@ -15,7 +15,7 @@ Model 1:
 
 <p align="center">
     
-      <img src="/Model_1.png" >
+      <img src="/model1.png" >
 
 </p>
 
@@ -27,7 +27,7 @@ Model 2:
 
 <p align="center">
     
-      <img src="/Model_2.png" >
+      <img src="/model2.png" >
 
 </p>
 
@@ -39,7 +39,7 @@ Tasks:
 
 <p align="center">
     
-     <img src="/Task_1.png" >
+     <img src="/task1.png" >
 
 </p>
 
@@ -51,7 +51,7 @@ Tasks:
 
 <p align="center">
     
-     <img src="/Task_2.png" >
+     <img src="/task2.png" >
 
 </p>
 
@@ -66,7 +66,7 @@ Display2 отображает наше количество итераций - i
 
 <p align="center">
     
-     <img src="/Task_3.png" >
+     <img src="/task3.png" >
 
 </p>
 
@@ -78,7 +78,7 @@ Model 3:
 
 <p align="center">
     
-     <img src="/Model_3.png" >
+     <img src="/model3.png" >
 
 </p>
 
