@@ -121,9 +121,9 @@ w(t) = 4 K = 0.1 T0 = 10 TD = 50 T = 10
 
 linear 
    <p>
-    <img src="src/lin.png">
+    <img src="images/lin.png">
 </p>
 Nonlinear equation
 <p>
-    <img src="src/nlin.png">
+    <img src="images/nlin.png">
 </p>
