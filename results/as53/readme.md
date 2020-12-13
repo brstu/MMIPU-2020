@@ -53,7 +53,7 @@
 | 12. Игнаткевич Алексей   | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
 | 13. Кириенко Юрий        | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
 | 14. Ковалевич Егор       | :star:                   | :star:                                   | :star:                      |                        |
-| 15. Кривонос Елизавета   | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
+| 15. Кривонос Елизавета   | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 16. Мазур Игорь          | :x:                      | :x:                                      | :x:                         |                        |
 | 17. Максимук Владислав   | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
 | 18. Мискевич Александр   | :heavy_exclamation_mark: | :heavy_check_mark:                       | :star:                     |                        |
@@ -67,7 +67,7 @@
 | 26. Раткевич Алексей     | :heavy_exclamation_mark: | :star:                                   | :star:                      |                        |
 | 27. Степанюк Роман       | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 28. Степанюк Анатолий    | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
-| 29. Храповицкий Олег     | :heavy_exclamation_mark: | :x:                                      | :x:                         |                        |
+| 29. Храповицкий Олег     | :heavy_exclamation_mark: | :heavy_exclamation_mark:                 | :heavy_exclamation_mark: все в ПР-е к первой лабе       |                        |
 | 30. Шарманов Иван        | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:    |                        |
 |                          | :x: - не сделано         | :heavy_exclamation_mark: - надо изменить | :heavy_check_mark: - готово | :star: - висит PR      |
 
