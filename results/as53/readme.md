@@ -49,7 +49,7 @@
 | 8. Демидович Анна        | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
 | 9. Завадский Илья        | :x:                      | :x:                                      | :x:                         |                        |
 | 10. Зайчук Даниил        | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
-| 11. Замулко Дарина       | :heavy_exclamation_mark: | :heavy_exclamation_mark:                 | :x:                         |                        |
+| 11. Замулко Дарина       | :heavy_check_mark:       | :heavy_exclamation_mark:                 | :x:                         |                        |
 | 12. Игнаткевич Алексей   | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
 | 13. Кириенко Юрий        | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
 | 14. Ковалевич Егор       | :star:                   | :star:                                   | :star:                      |                        |
