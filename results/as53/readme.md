@@ -26,7 +26,7 @@
 20. [Олесиюк Артур (as005320)](https://github.com/ArturOlesiyk)
 21. [Ораев Кервен (as005321)](https://github.com/Kerwen1707)
 22. [Петрова Мария (as005322)](https://github.com/MashaPetrova04112000)
-23. [Прокопук Марина (as005323)](https://github.com/MarinaProkopukAs53)
+23. [Прокопук Марина (as005323 || as005423)](https://github.com/MarinaProkopukAs53)
 24. [Прудников Владимир (as005324)](https://github.com/PrudnikovVladimir)
 25. [Пстыга Елена (as005325)](https://github.com/Pstyga-Elena)
 26. [Раткевич Алексей (as005326)](https://github.com/RatkevichAleksey)
@@ -61,7 +61,7 @@
 | 20. Олесиюк Артур        | :heavy_check_mark:       | :x:                                      | :x:                         |                        |
 | 21. Ораев Кервен         | :x:                      | :x:                                      | :x:                         |                        |
 | 22. Петрова Мария        | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
-| 23. Прокопук Марина      | :x:                      | :star:                                   | :star:                      |                        |
+| 23. Прокопук Марина      | :heavy_check_mark:       | :star:                                   | :star:                      |                        |
 | 24. Прудников Владимир   | :heavy_check_mark:       | :heavy_exclamation_mark: :star:          | :star:                      |                        |
 | 25. Пстыга Елена         | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 26. Раткевич Алексей     | :heavy_exclamation_mark: | :star:                                   | :star:                      |                        |
