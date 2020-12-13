@@ -62,7 +62,7 @@
 | 21. Ораев Кервен         | :x:                      | :x:                                      | :x:                         |                        |
 | 22. Петрова Мария        | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 23. Прокопук Марина      | :x:                      | :star:                                   | :star:                      |                        |
-| 24. Прудников Владимир   | :star:                   | :heavy_exclamation_mark: :star:          | :star:                      |                        |
+| 24. Прудников Владимир   | :heavy_check_mark:       | :heavy_exclamation_mark: :star:          | :star:                      |                        |
 | 25. Пстыга Елена         | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 26. Раткевич Алексей     | :heavy_exclamation_mark: | :star:                                   | :star:                      |                        |
 | 27. Степанюк Роман       | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
