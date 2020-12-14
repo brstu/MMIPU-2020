@@ -43,7 +43,7 @@
 | 2. Альциванович Николай  | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
 | 3. Анискин Дмитрий       | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
 | 4. Бранчук Дмитрий       | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
-| 5. Брашевец Дмитрий      | :x:                      | :x:                                      | :x:                         |                        |
+| 5. Брашевец Дмитрий      | :star:                   | :star:                                   | :x:                         |                        |
 | 6. Будакова Анастасия    | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
 | 7. Данилюк Владислав     | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
 | 8. Демидович Анна        | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
@@ -54,7 +54,7 @@
 | 13. Кириенко Юрий        | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
 | 14. Ковалевич Егор       | :star:                   | :star:                                   | :star:                      |                        |
 | 15. Кривонос Елизавета   | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
-| 16. Мазур Игорь          | :star:                   | :star:                                   | :x:                         |                        |
+| 16. Мазур Игорь          | :star:                   | :star:                                   | :star:                      |                        |
 | 17. Максимук Владислав   | :heavy_check_mark:       | :heavy_check_mark:                       | :star:                      |                        |
 | 18. Мискевич Александр   | :heavy_check_mark:       | :heavy_check_mark:                       | :star:                     |                        |
 | 19. Новик Вадим          | :heavy_check_mark:       | :heavy_exclamation_mark: :star:          | :star:                      |                        |
