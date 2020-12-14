@@ -1,0 +1,136 @@
+# Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`class `[`Linear`](#class-linear) | class that represents linear model of controlled object
+`class `[`Model`](#class-model) | template for constructing object of control
+`class `[`Non_Linear`](#class-non_linear) | class that represents non-linear model of controlled object
+`class `[`Controller`](#class-controller) | class for controller implementation
+
+# class `Linear`
+
+```
+class Linear
+  : public Model
+```  
+
+class that represents linear model of controlled object
+
+extends class [Model](#class-model) hence it's a child class that represents linear model
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public inline  `[`Linear`](#class-linearmodel-1a5c722821b5adf7f20c336a299b6cc269)`(const float a,const float b)` | constructor for linear model class 
+`public inline virtual float `[`equation`](#class-linearmodel-1af55f61d71a93f7ef12d69d8b6c2755f2)`(double heat,double y)` | function that calculates y 
+
+## Members
+
+#### `public inline  `[`Linear`](#class-linearmodel-1a5c722821b5adf7f20c336a299b6cc269)`(const float a,const float b)` 
+
+constructor for linear model class 
+#### Parameters
+* `a` `b` coefficients
+
+#### `public inline virtual float `[`expression`](#class-linearmodel-1af55f61d71a93f7ef12d69d8b6c2755f2)`(double heat,double y)` 
+
+function that calculates y 
+#### Parameters
+* `heat` input warm calculated by regulator 
+
+* `y` initial value of y 
+
+#### Returns
+y new value of y
+
+# class `Model` 
+
+template for constructing object of control
+
+abstract class that will be used to construct linear and non-linear models
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public float `[`expression`](#class-model-1a772188a332543b15ce764ffb52e7f1d2)`(double heat,double y)` | abstract function to be overridden 
+
+## Members
+
+#### `public float `[`expression`](#class-model-1a772188a332543b15ce764ffb52e7f1d2)`(double heat,double y)` 
+
+abstract function to be overridden 
+#### Parameters
+* `heat` input warm 
+
+* `y` output value
+
+# class `Non_Linear`
+
+```
+class Non_Linear
+  : public Model
+```  
+
+class that represents non-linear model of controlled object
+
+extends class [Model](#class-model) hence it's a child class that represents non-linear model
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public inline  `[`Non_Linear`](#class-nonlinearmodel-1acdbfe9c5e0bf3bded2c00352b299a3bf)`(float a,float b,float c,float d)` | constructor for non-linear model class 
+`public inline virtual float `[`expression`](#class-nonlinearmodel-1aecbfc7aa14bddc5553ef3443c7e3fd25)`(double heat,double y)` | function that calculates y 
+
+## Members
+
+#### `public inline  `[`Non_Linear`](#class-nonlinearmodel-1acdbfe9c5e0bf3bded2c00352b299a3bf)`(float a,float b,float c,float d)` 
+
+constructor for non-linear model class 
+#### Parameters
+* `a` `b` `c` `d` coefficients
+
+#### `public inline virtual float `[`expression`](#class-nonlinearmodel-1aecbfc7aa14bddc5553ef3443c7e3fd25)`(double heat,double y)` 
+
+function that calculates y 
+#### Parameters
+* `heat` input warm calculated by controller 
+
+* `y` initial value of y 
+
+#### Returns
+y_1 new value of y
+
+# class `Controller` 
+
+class for controller implementation
+
+[Controller](#class-controller) class that will calculate input warm
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public inline  `[`Controller`](#class-regulator-1aedb45b9c3df014093c4991acd526a2bf)`(const double K,const double T_0,const double T_D,const double T)` | constructor for controller class 
+`public inline double `[`heat`](#class-regulator-1a15ccfbe686d6feec4427dc765d91f3a2)`(const double e,const double e_0,const double e_01)` | function that calculates input warm 
+
+## Members
+
+#### `public inline  `[`Controller`](#class-regulator-1aedb45b9c3df014093c4991acd526a2bf)`(const double K,const double T_0,const double T_D,const double T)` 
+
+constructor for controller class 
+#### Parameters
+* `K` `T_0` `T_D` `T` coefficients
+
+#### `public inline double `[`heat`](#class-regulator-1a15ccfbe686d6feec4427dc765d91f3a2)`(const double e,const double e_0,const double e_01)` 
+
+function that calculates input warm 
+#### Parameters
+* `e` `e_0` `e_01` current, previous, and previous of previous one errors 
+
+#### Returns
+heat calculated value of input warm
+
+Generated by [Moxygen](https://sourcey.com/moxygen)
