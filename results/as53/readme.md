@@ -54,11 +54,11 @@
 | 13. Кириенко Юрий        | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
 | 14. Ковалевич Егор       | :star:                   | :star:                                   | :star:                      |                        |
 | 15. Кривонос Елизавета   | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
-| 16. Мазур Игорь          | :x:                      | :x:                                      | :x:                         |                        |
-| 17. Максимук Владислав   | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
-| 18. Мискевич Александр   | :heavy_exclamation_mark: | :heavy_check_mark:                       | :star:                     |                        |
+| 16. Мазур Игорь          | :star:                   | :star:                                   | :x:                         |                        |
+| 17. Максимук Владислав   | :heavy_check_mark:       | :heavy_check_mark:                       | :star:                      |                        |
+| 18. Мискевич Александр   | :heavy_check_mark:       | :heavy_check_mark:                       | :star:                     |                        |
 | 19. Новик Вадим          | :heavy_check_mark:       | :heavy_exclamation_mark: :star:          | :star:                      |                        |
-| 20. Олесиюк Артур        | :heavy_check_mark:       | :x:                                      | :x:                         |                        |
+| 20. Олесиюк Артур        | :heavy_check_mark:       | :star:                                   | :star:                      |                        |
 | 21. Ораев Кервен         | :x:                      | :x:                                      | :x:                         |                        |
 | 22. Петрова Мария        | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 23. Прокопук Марина      | :heavy_check_mark:       | :star:                                   | :star:                      |                        |
