@@ -1,6 +1,6 @@
 # Laboratory work #2
 
-#### Student: Zaichuk Daniil
+#### Student: Abdyrahmanow Wepa
 
 ###### Task 2. PID controller
 In C ++, implement a program that simulates the PID controller discussed above.
