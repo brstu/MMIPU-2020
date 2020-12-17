@@ -7,7 +7,7 @@
 ##### https://youtu.be/CM0XByflqZU
 
 I have installed ubuntu like 2nd system, because I had some problems on Virtual Machine. I wasn't able to build my project because of some errors.
-So, after I have installed ubuntu I followed the task_03 instructions and installed all the require software and built a project.
+So, after I have installed ubuntu I followed the task_03 instructions and installed all the required software and built a project.
 In robotic laboratory I have connected my laptop to controller. Here are my steps one by one:
 ##### 1.Connected my laptop to controller with ethernet cable and configured network adapter (IPv4:192.168.1.11; Net Mask:255.255.255.0);
 ##### 2.Checked connection via ssh (ping 192.168.1.10);
