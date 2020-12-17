@@ -28,9 +28,7 @@ Problems which I was faced:
 
 ### Video:
 
-```none
 [![Watch the video](https://img.youtube.com/vi/ciMyl-Rdti0/maxresdefault.jpg)](https://youtu.be/ciMyl-Rdti0)
-```
 
 ### Code:
 
