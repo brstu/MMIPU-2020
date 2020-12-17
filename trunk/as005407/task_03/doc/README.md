@@ -19,6 +19,6 @@ int main() {
 ```
  
 ##### Result you can see on youtube(video from robototehnics lab): 
-[![Watch the video](https://youtu.be/BWa2Y2zDOBg)]
+https://youtu.be/BWa2Y2zDOBg
 
 
