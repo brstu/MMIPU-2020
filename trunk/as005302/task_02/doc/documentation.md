@@ -1,0 +1,136 @@
+# Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`class `[`LinearModel`](#class-linearmodel) | class that represents linear model of controlled object
+`class `[`Model`](#class-model) | template for constructing object of control
+`class `[`NonLinearModel`](#class-nonlinearmodel) | class that represents non-linear model of controlled object
+`class `[`Regulator`](#class-regulator) | class for regulator implementation
+
+# class `LinearModel`
+
+```
+class LinearModel
+  : public Model
+```  
+
+class that represents linear model of controlled object
+
+extends class [Model](#class-model) hence it's a child class that represents linear model
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public inline  `[`LinearModel`](#class-linearmodel-1a5c722821b5adf7f20c336a299b6cc269)`(const float a,const float b)` | constructor for linear model class 
+`public inline virtual float `[`equation`](#class-linearmodel-1af55f61d71a93f7ef12d69d8b6c2755f2)`(double inpWarm,double y)` | function that calculates y 
+
+## Members
+
+#### `public inline  `[`LinearModel`](#class-linearmodel-1a5c722821b5adf7f20c336a299b6cc269)`(const float a,const float b)` 
+
+constructor for linear model class 
+#### Parameters
+* `a` `b` coefficients
+
+#### `public inline virtual float `[`equation`](#class-linearmodel-1af55f61d71a93f7ef12d69d8b6c2755f2)`(double inpWarm,double y)` 
+
+function that calculates y 
+#### Parameters
+* `inpWarm` input warm calculated by regulator 
+
+* `y` initial value of y 
+
+#### Returns
+y new value of y
+
+# class `Model` 
+
+template for constructing object of control
+
+abstract class that will be used to construct linear and non-linear models
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public float `[`equation`](#class-model-1a772188a332543b15ce764ffb52e7f1d2)`(double inpWarm,double y)` | abstract function to be overridden 
+
+## Members
+
+#### `public float `[`equation`](#class-model-1a772188a332543b15ce764ffb52e7f1d2)`(double inpWarm,double y)` 
+
+abstract function to be overridden 
+#### Parameters
+* `inpWarm` input warm 
+
+* `y` output value
+
+# class `NonLinearModel`
+
+```
+class NonLinearModel
+  : public Model
+```  
+
+class that represents non-linear model of controlled object
+
+extends class [Model](#class-model) hence it's a child class that represents non-linear model
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public inline  `[`NonLinearModel`](#class-nonlinearmodel-1acdbfe9c5e0bf3bded2c00352b299a3bf)`(float a,float b,float c,float d)` | constructor for non-linear model class 
+`public inline virtual float `[`equation`](#class-nonlinearmodel-1aecbfc7aa14bddc5553ef3443c7e3fd25)`(double inpWarm,double y)` | function that calculates y 
+
+## Members
+
+#### `public inline  `[`NonLinearModel`](#class-nonlinearmodel-1acdbfe9c5e0bf3bded2c00352b299a3bf)`(float a,float b,float c,float d)` 
+
+constructor for non-linear model class 
+#### Parameters
+* `a` `b` `c` `d` coefficients
+
+#### `public inline virtual float `[`equation`](#class-nonlinearmodel-1aecbfc7aa14bddc5553ef3443c7e3fd25)`(double inpWarm,double y)` 
+
+function that calculates y 
+#### Parameters
+* `inpWarm` input warm calculated by regulator 
+
+* `y` initial value of y 
+
+#### Returns
+y1 new value of y
+
+# class `Regulator` 
+
+class for regulator implementation
+
+[Regulator](#class-regulator) class that will calculate input warm
+
+## Summary
+
+ Members                        | Descriptions                                
+--------------------------------|---------------------------------------------
+`public inline  `[`Regulator`](#class-regulator-1aedb45b9c3df014093c4991acd526a2bf)`(const double K,const double T0,const double TD,const double T)` | constructor for regulator class 
+`public inline double `[`InpWarm`](#class-regulator-1a15ccfbe686d6feec4427dc765d91f3a2)`(const double e,const double e0,const double e00)` | function that calculates input warm 
+
+## Members
+
+#### `public inline  `[`Regulator`](#class-regulator-1aedb45b9c3df014093c4991acd526a2bf)`(const double K,const double T0,const double TD,const double T)` 
+
+constructor for regulator class 
+#### Parameters
+* `K` `T0` `TD` `T` coefficients
+
+#### `public inline double `[`InpWarm`](#class-regulator-1a15ccfbe686d6feec4427dc765d91f3a2)`(const double e,const double e0,const double e00)` 
+
+function that calculates input warm 
+#### Parameters
+* `e` `e0` `e00` current, previous, and previous of previous one errors 
+
+#### Returns
+inpWarm calculated value of input warm
+
+Generated by [Moxygen](https://sourcey.com/moxygen)
