@@ -67,7 +67,7 @@
 | 26. Раткевич Алексей     | :star:                   | :star:                                   | :star:                      |                        |
 | 27. Степанюк Роман       | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 28. Степанюк Анатолий    | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
-| 29. Храповицкий Олег     | :heavy_exclamation_mark: | :heavy_exclamation_mark:                 | :heavy_exclamation_mark:        |                        |
+| 29. Храповицкий Олег     | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:       |                        |
 | 30. Шарманов Иван        | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:    |                        |
 |                          | :x: - не сделано         | :heavy_exclamation_mark: - надо изменить | :heavy_check_mark: - готово | :star: - висит PR      |
 
