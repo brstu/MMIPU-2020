@@ -4,7 +4,7 @@
 
 ### Список студентов (со ссылками на GitHub-аккаунты).
 
-1. [Абдырахманов Вепа](https://github.com/wepa777)
+1. [Абдырахманов Вепа (as005306)](https://github.com/wepa777)
 2. [Альциванович Николай (as005301)](https://github.com/surpr1se-2020)
 3. [Анискин Дмитрий (as005302)](https://github.com/Ann1ks)
 4. [Бранчук Дмитрий (as005303)](https://github.com/dbranchuk)
@@ -39,35 +39,35 @@
 
 | Студент                  | Первая лабораторная      | Вторая лабораторная                      | Третья лабораторная         | Дополнительные заметки |
 | ------------------------ | ------------------------ | ---------------------------------------- | --------------------------- | ---------------------- |
-| 1. Абдырахманов Вепа     | :x:                      | :x:                                      | :x:                         |                        |
-| 2. Альциванович Николай  | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
+| 1. Абдырахманов Вепа     | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
+| 2. Альциванович Николай  | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
 | 3. Анискин Дмитрий       | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
 | 4. Бранчук Дмитрий       | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
-| 5. Брашевец Дмитрий      | :star:                   | :star:                                   | :x:                         |                        |
+| 5. Брашевец Дмитрий      | :heavy_exclamation_mark: | :heavy_check_mark:                       | :x:                         |                        |
 | 6. Будакова Анастасия    | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
-| 7. Данилюк Владислав     | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
+| 7. Данилюк Владислав     | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
 | 8. Демидович Анна        | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
 | 9. Завадский Илья        | :x:                      | :x:                                      | :x:                         |                        |
-| 10. Зайчук Даниил        | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
-| 11. Замулко Дарина       | :heavy_check_mark:       | :heavy_exclamation_mark:                 | :x:                         |                        |
-| 12. Игнаткевич Алексей   | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
-| 13. Кириенко Юрий        | :heavy_check_mark:       | :star:                                   | :x:                         |                        |
-| 14. Ковалевич Егор       | :star:                   | :star:                                   | :star:                      |                        |
+| 10. Зайчук Даниил        | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
+| 11. Замулко Дарина       | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
+| 12. Игнаткевич Алексей   | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
+| 13. Кириенко Юрий        | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
+| 14. Ковалевич Егор       | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 15. Кривонос Елизавета   | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
-| 16. Мазур Игорь          | :star:                   | :star:                                   | :star:                      |                        |
-| 17. Максимук Владислав   | :heavy_check_mark:       | :heavy_check_mark:                       | :star:                      |                        |
-| 18. Мискевич Александр   | :heavy_check_mark:       | :heavy_check_mark:                       | :star:                     |                        |
-| 19. Новик Вадим          | :heavy_check_mark:       | :heavy_exclamation_mark: :star:          | :star:                      |                        |
-| 20. Олесиюк Артур        | :heavy_check_mark:       | :star:                                   | :star:                      |                        |
-| 21. Ораев Кервен         | :x:                      | :x:                                      | :x:                         |                        |
+| 16. Мазур Игорь          | :heavy_check_mark:       | :heavy_exclamation_mark:                 | :heavy_check_mark:          |                        |
+| 17. Максимук Владислав   | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
+| 18. Мискевич Александр   | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:         |                        |
+| 19. Новик Вадим          | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
+| 20. Олесиюк Артур        | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
+| 21. Ораев Кервен         | :heavy_check_mark:       | :heavy_check_mark:                       | :x:                         |                        |
 | 22. Петрова Мария        | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
-| 23. Прокопук Марина      | :heavy_check_mark:       | :star:                                   | :star:                      |                        |
-| 24. Прудников Владимир   | :heavy_check_mark:       | :heavy_exclamation_mark: :star:          | :star:                      |                        |
+| 23. Прокопук Марина      | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
+| 24. Прудников Владимир   | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 25. Пстыга Елена         | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
-| 26. Раткевич Алексей     | :heavy_exclamation_mark: | :star:                                   | :star:                      |                        |
+| 26. Раткевич Алексей     | :star:                   | :star:                                   | :star:                      |                        |
 | 27. Степанюк Роман       | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
 | 28. Степанюк Анатолий    | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:          |                        |
-| 29. Храповицкий Олег     | :heavy_exclamation_mark: | :heavy_exclamation_mark:                 | :heavy_exclamation_mark:        |                        |
+| 29. Храповицкий Олег     | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:       |                        |
 | 30. Шарманов Иван        | :heavy_check_mark:       | :heavy_check_mark:                       | :heavy_check_mark:    |                        |
 |                          | :x: - не сделано         | :heavy_exclamation_mark: - надо изменить | :heavy_check_mark: - готово | :star: - висит PR      |
 
@@ -102,7 +102,7 @@
 | 25. Пстыга Елена         | :x:                                        | :x:                                         |                           |
 | 26. Раткевич Алексей     | :x:                                        | :x:                                         |                           |
 | 27. Степанюк Роман       | :x:                                        | :x:                                         |                           |
-| 28. Степанюк Анатолий    | :star: VR                                  | :x:                                         |                           |
+| 28. Степанюк Анатолий    | :heavy_check_mark: VR                      | :x:                                         |                           |
 | 29. Храповицкий Олег     | :heavy_check_mark: Visual Studio Code      | :x:                                         |                           |
-| 30. Шарманов Иван        | :star: AR                                  | :x:                                         |                           |
+| 30. Шарманов Иван        | :heavy_check_mark: AR                      | :x:                                         |                           |
 |                          | :x: - не сдан                              | :star: - получен                            | :heavy_check_mark: - сдан |
